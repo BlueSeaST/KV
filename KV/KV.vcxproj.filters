@@ -22,6 +22,9 @@
     <Filter Include="源文件\libKVXTxMC">
       <UniqueIdentifier>{bd355054-dff2-4ed4-bfc7-368968f0d303}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\extern">
+      <UniqueIdentifier>{fdebfb56-85aa-442e-8000-d61997bc58c5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="libKVXT\KVXT.c">
@@ -44,14 +47,8 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="libKVXT\KVXT.h">
-      <Filter>源文件\libKVXT</Filter>
-    </ClInclude>
     <ClInclude Include="libKVXT\KVXT_extern.h">
       <Filter>源文件\libKVXT</Filter>
-    </ClInclude>
-    <ClInclude Include="libKVXPKU\KVXPKU.h">
-      <Filter>源文件\livKVXPKU</Filter>
     </ClInclude>
     <ClInclude Include="libKVXPKU\KVXPKU_extern.h">
       <Filter>源文件\livKVXPKU</Filter>
@@ -59,8 +56,14 @@
     <ClInclude Include="libKVXTxMC\KVXTxMC_extern.h">
       <Filter>源文件\libKVXTxMC</Filter>
     </ClInclude>
+    <ClInclude Include="libKVXT\KVXT.h">
+      <Filter>源文件\extern</Filter>
+    </ClInclude>
     <ClInclude Include="libKVXTxMC\KVXTxMC.h">
-      <Filter>源文件\libKVXTxMC</Filter>
+      <Filter>源文件\extern</Filter>
+    </ClInclude>
+    <ClInclude Include="libKVXPKU\KVXPKU.h">
+      <Filter>源文件\extern</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
