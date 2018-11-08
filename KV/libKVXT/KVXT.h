@@ -15,12 +15,12 @@
 #define _KVXT_H_
 
 /*-------------------- 头文件 --------------------*/
-#include"KVXT_extern.h"
-#include<base.h>
 #include<stdlib.h>
 //#include<stdbool.h> // 在base.h中有bool的定义
 #include<string.h>
 
+#include<KVXT_extern.h>
+#include<base.h>
 #include<KVXAxLOTxPAR_tc.h>
 #include<MEXA_tc.h>
 #include<MEXAxVSA_tc.h>

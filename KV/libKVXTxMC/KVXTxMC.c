@@ -11,8 +11,7 @@
 * 版本    日期    作者    内容
 * 1.0
 *****************************************************************************/
-#include "KVXTxMC.h"
-
+#include <KVXTxMC.h>
 
 
 
@@ -24,6 +23,31 @@
 
 
 /*----------------------- 外部函数声明 -----------------------*/
+
+
+
+
+
+/*----------------------- 全局变量声明 -----------------------*/
+
+KVXTxMC_singleton_object *local_KVXTxMC_singleton_object; 
+
+
+
+
+
+
+
+/*----------------------- 静态函数声明 -----------------------*/
+
+
+
+
+
+
+
+/*----------------------- 函数实现 -----------------------*/
+// 不用翻译的模块内部函数的空实现
 int KVXTxMC_isim_set_iVSA_plate_PDGC(KVXTxMC_singleton_object *local_KVXTxMC_singleton_object,
 	WPxCHUCK_chuck_id_enum chuck_id, MEXAxWAFxPLATE_wafer_level_plate plate_id, KVXTxMC_iVSA_plate_PDGC * plate_PDGC_p)
 {
@@ -120,8 +144,6 @@ int KVXTxMC_isim_get_AGILE_ref_meas_mcs(KVXTxMC_singleton_object *local_KVXTxMC_
 	return 0;
 }
 
-
-
 int KVXTxMC_isim_get_WM_scaninout_plane_area_params(KVXTxMC_singleton_object *local_KVXTxMC_singleton_object,
 	KVXTxMC_WM_scaninout_minimum_scan_plane_area_params *scaninout_plane_area_params_p)
 {
@@ -134,107 +156,11 @@ int KVXTxMC_isim_get_high_precision_XVSA_scan_mcs(KVXTxMC_singleton_object *loca
 	return 0;
 }
 
-
-
-
-
-//void THXAtraceTP(const char *psComponent, int iArg2)
-//{
-//	return;
-//}
-//
-//void ERXAlogExceptionSingleLink(int iErrorCode, int piErrorLink, char *psFile, int iLine, char *psSccsId, char *psContext)
-//{
-//	return;
-//}
-//
-//char *ERXAmakeContext(char *psFormat, ...)
-//{
-//	return;
-//}
-//
-//void THXAdataRequest(const char *psComponent, int iArg2, const char *pcFunction, int iArg4, const char *pcFormat, ...)
-//{
-//	return;
-//}
-//
-//void THXAtrace(const char *psComponent, int iArg2, const char *psFunction, const char *psFormat, ...)
-//{
-//	return;
-//}
-//
-//int THXAcheckSimMode(const char *psComponent, THXA_SIM_MODE eSimMode)
-//{
-//	return 0;
-//}
-//
-///*int OOXA_find_method(char* pObj,   //将OOXA_object_t*改为了char*
-//char* interFace,
-//int methodCode,
-//int Checksum,
-//void** asynchronousMethod);*/
-//
-//int OOXA_find_method(void *psSingleton, char *psArg2, int iArg3, int iArg4, int(**ppf)())
-//{
-//	return 0;
-//}
-//
-//int OOXA_allocate_buffer(int iBufferSize, void **ppBuffer)
-//{
-//	return 0;
-//}
-//
-//int OOXA_send_receive(KVXTxMC_singleton_object* pObj, char* interFace, int methodCode, int errorCode, char* req_msg_data,
-//	int req_msg_dataLen,
-//	void** rep_msg_data,
-//	int* act_len,
-//	int timeout,
-//	int retry_interval)
-//{
-//	return 0;
-//}
-//
-//void OOXA_release_buffer(void *pBuffer)
-//{}
-//
-//
-//
-//int OOXA_allocate_parameter(int dataLen, void **parameter, bool *isOk)
-//{
-//	return 0;
-//}
-//
-//
-//int PLXAmem_free(void **pBuffer)
-//{
-//	return 0;
-//}
-
-
-/*----------------------- 全局变量声明 -----------------------*/
-
-KVXTxMC_singleton_object *local_KVXTxMC_singleton_object; 
-
-
-
-
-
-
-
-/*----------------------- 静态函数声明 -----------------------*/
-
-
-
-
-
-
-
-/*----------------------- 函数实现 -----------------------*/
-
+// 需要翻译的函数的实现
 int KVXTxMC_set_iVSA_plate_PDGC(WPxCHUCK_chuck_id_enum chuck_id, MEXAxWAFxPLATE_wafer_level_plate plate_id,
 	KVXTxMC_iVSA_plate_PDGC *plate_PDGC_p)
 {
-	STRUCT_libKVXTxMC_unk_1 * req_msg_data = NULL;
+	KVXTxMC_unk_1 * req_msg_data = NULL;
 	int(*pKVXTxMC_isim_set_iVSA_plate_PDGC)(KVXTxMC_singleton_object *local_KVXTxMC_singleton_object, WPxCHUCK_chuck_id_enum chuck_id, MEXAxWAFxPLATE_wafer_level_plate plate_id, KVXTxMC_iVSA_plate_PDGC * plate_PDGC_p) = NULL;
 	int iErrorCode = 0;  //
 	char *rep_msg_data = NULL;
@@ -404,7 +330,7 @@ int KVXTxMC_get_iVSA_plate_PDGC(WPxCHUCK_chuck_id_enum chuck_id, MEXAxWAFxPLATE_
 	KVXTxMC_iVSA_plate_PDGC * plate_PDGC_p)
 {
 
-	STRUCT_libKVXTxMC_unk_2 * req_msg_data = NULL;   //var_4
+	KVXTxMC_unk_2 * req_msg_data = NULL;   //var_4
 	int(*pKVXTxMC_isim_get_iVSA_plate_PDGC)(KVXTxMC_singleton_object *local_KVXTxMC_singleton_object, WPxCHUCK_chuck_id_enum chuck_id, MEXAxWAFxPLATE_wafer_level_plate plate_id, void * s1) = NULL;  //var_8
 	int iErrorCode = 0;   //var_C
 	bool isOk = FALSE; //  var_18
@@ -603,7 +529,7 @@ int KVXTxMC_get_iVSA_plate_PDGC(WPxCHUCK_chuck_id_enum chuck_id, MEXAxWAFxPLATE_
 int KVXTxMC_set_ag_ls_chuck_resist_offsets(int chuck_ix, KVXTxMC_AG_LS_resist_offsets_mcs *ag_ls_resist_offsets)
 {
 	int iErrorCode = 0; // var_C
-	STRUCT_libKVXTxMC_unk_3 * req_msg_data = NULL; //  var_4
+	KVXTxMC_unk_3 * req_msg_data = NULL; //  var_4
 	int(*pKVXTxMC_isim_set_ag_ls_chuck_resist_offsets)(KVXTxMC_singleton_object *local_KVXTxMC_singleton_object, int chuck_ix,
 		KVXTxMC_AG_LS_resist_offsets_mcs * ag_ls_resist_offsets) = NULL; // var_8
 	char * rep_msg_data = NULL; // var_10
@@ -765,7 +691,7 @@ int KVXTxMC_set_ag_ls_chuck_resist_offsets(int chuck_ix, KVXTxMC_AG_LS_resist_of
 
 int KVXTxMC_set_LS_drift_correction(WPxCHUCK_chuck_id_enum chuck_id, KVXTxMC_LS_drift_correction *LS_drift_corr_p)
 {
-	STRUCT_libKVXTxMC_unk_4 * req_msg_data = NULL; //var_4
+	KVXTxMC_unk_4 * req_msg_data = NULL; //var_4
 	int(*pKVXTxMC_isim_set_LS_drift_correction)(KVXTxMC_singleton_object *local_KVXTxMC_singleton_object, WPxCHUCK_chuck_id_enum chuck_id, 
 		KVXTxMC_LS_drift_correction * LS_drift_corr_p) = NULL;  //var_8
 	int iErrorCode = 0;  //var_C 
@@ -1120,7 +1046,7 @@ int KVXTxMC_get_LS_drift_correction(WPxCHUCK_chuck_id_enum chuck_id, KVXTxMC_LS_
 
 int KVXTxMC_set_LS_stroke_tilt(WPxCHUCK_chuck_id_enum chuck_id, KVXTxMC_LS_stroke_tilt *LS_stroke_tilt_p)
 {
-	STRUCT_libKVXTxMC_unk_5 * req_msg_data = NULL;  //var_4
+	KVXTxMC_unk_5 * req_msg_data = NULL;  //var_4
 	int(*pKVXTxMC_isim_set_LS_stroke_tilt)(KVXTxMC_singleton_object *local_KVXTxMC_singleton_object,
 		WPxCHUCK_chuck_id_enum chuck_id, KVXTxMC_LS_stroke_tilt * LS_stroke_tilt_p) = NULL;   //var_8
 	int iErrorCode = 0;  // var_C
@@ -1646,7 +1572,7 @@ int KVXTxMC_get_fsm_ero_params(bool *ero_correction_p, double *ero_dist_edge_p)
 	int(*pKVXTxMC_isim_get_fsm_ero_params)(KVXTxMC_singleton_object *local_KVXTxMC_singleton_object,
 		bool *ero_correction_p, double *ero_dist_edge_p) = NULL;  //var_8
 	int iErrorCode = 0;  //var_C
-	STRUCT_libKVXTxMC_unk_6 * rep_msg_data = NULL;  //var_10
+	KVXTxMC_unk_6 * rep_msg_data = NULL;  //var_10
 	int act_len = 0;   //var_14 
 	bool isOk = FALSE;  //var_18
 	bool var_1C = FALSE;//var_1C

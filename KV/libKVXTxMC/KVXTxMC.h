@@ -20,6 +20,7 @@
 #include <string.h>
 #include <stdio.h> 
 
+#include<KVXTxMC_extern.h>
 #include <THXA.h>
 #include <ERXA.h>
 #include <OOXA.h>
@@ -35,9 +36,10 @@
 
 
 
-
-
 /*----------------------- 枚举定义 -----------------------*/
+
+
+
 
 
 /*------------------------ 结构体 ------------------------*/
@@ -59,36 +61,40 @@ typedef struct{
 	WPxCHUCK_chuck_id_enum chuck_id;
 	MEXAxWAFxPLATE_wafer_level_plate plate_id;
 	KVXTxMC_iVSA_plate_PDGC * plate_PDGC_p;
-}STRUCT_libKVXTxMC_unk_1;
+}KVXTxMC_unk_1;
 
 //应用于KVXTxMC_get_iVSA_plate_PDGC
 typedef struct{
 	WPxCHUCK_chuck_id_enum chuck_id;
 	MEXAxWAFxPLATE_wafer_level_plate plate_id;
-}STRUCT_libKVXTxMC_unk_2;
+}KVXTxMC_unk_2;
 
 //应用于KVXTxMC_set_ag_ls_chuck_resist_offsets
 typedef struct{
 	int a;
 	KVXTxMC_AG_LS_resist_offsets_mcs *ag_ls_resist_offsets;
-}STRUCT_libKVXTxMC_unk_3;
+}KVXTxMC_unk_3;
 
 //应用于KVXTxMC_set_LS_drift_correction
 typedef struct{
 	WPxCHUCK_chuck_id_enum chuck_id;
 	KVXTxMC_LS_drift_correction *LS_drift_corr_p;  //这个结构体的大小不符合
-}STRUCT_libKVXTxMC_unk_4;
+}KVXTxMC_unk_4;
 
 //应用于KVXTxMC_set_LS_stroke_tilt
 typedef struct{
 	WPxCHUCK_chuck_id_enum chuck_id;
 	KVXTxMC_LS_stroke_tilt *LS_stroke_tilt_p;
-}STRUCT_libKVXTxMC_unk_5;
+}KVXTxMC_unk_5;
 
 typedef struct{
 	bool  ero_correction_p;
 	double  ero_dist_edge_p;
-}STRUCT_libKVXTxMC_unk_6;
+}KVXTxMC_unk_6;
+
+
+
+
 /*----------------------- 函数声明 -----------------------*/
 
 int KVXTxMC_isim_set_iVSA_plate_PDGC(KVXTxMC_singleton_object *local_KVXTxMC_singleton_object, 

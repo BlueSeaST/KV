@@ -19,6 +19,7 @@
 #include<string.h>
 //#include <stdbool.h>
 
+#include <KVXPKU_extern.h>
 #include<base.h>
 #include<THXA.h>
 #include<OOXA.h>

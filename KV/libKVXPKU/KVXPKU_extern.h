@@ -15,6 +15,7 @@
 #define _CCXX_H_
 
 /*-------------------- м╥нд╪Ч --------------------*/
+#include<KVXPKU.h>
 #include <base.h>
 
 

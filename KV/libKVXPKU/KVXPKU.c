@@ -11,8 +11,7 @@
 * 版本    日期    作者    内容
 * 1.0
 *****************************************************************************/
-#include "KVXPKU.h"
-#include "KVXPKU_extern.h"
+#include <KVXPKU.h>
 
 
 /*----------------------- 外部变量声明 -----------------------*/
@@ -39,6 +38,24 @@ KVXPKU_local_KVXPKU_singleton_object* local_KVXPKU_singleton_object;
 
 
 /*----------------------- 函数实现 -----------------------*/
+// 不需要翻译的模块内部函数的空实现
+int KVXPKU_isim_get_wafermap_fingerprints(KVXPKU_local_KVXPKU_singleton_object *local_KVXPKU_singleton_object,
+	WPxCHUCK_chuck_id_enum chuck_id,
+	bool *fingerprints_available,
+	KWXA_fingerprint_mapping_list *fingerprint_mapping_list,
+	KWXA_small_wafer_map *wafermap_fingerprints) // 返回值默认0
+{
+	return 0;
+}
+
+int KVXPKU_isim_get_wafer_map(KVXPKU_local_KVXPKU_singleton_object *local_KVXPKU_singleton_object,
+	WPxCHUCK_chuck_id_enum chuck_id,
+	KWXA_wafer_map *wafer_map_p) // 返回值默认0
+{
+	return 0;
+}
+
+// 需要翻译的函数的实现
 // 函数名：KVXPKU_get_wafermap_fingerprints
 int KVXPKU_get_wafermap_fingerprints(const WPxCHUCK_chuck_id_enum chuck_id,
 	bool *fingerprints_available,
