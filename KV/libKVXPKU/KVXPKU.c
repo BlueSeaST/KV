@@ -311,7 +311,7 @@ int KVXPKU_get_wafer_map(const WPxCHUCK_chuck_id_enum chuck_id,
 	{
 		// sethi   %hi(0), %g1
 		// ------>loc_D64
-		iErrorCode = OOXA_find_method(local_KVXPKU_singleton_object, "KVXPKU:", 0, 0x3D1F35A1, &pKVXPKU_isim_get_wafer_map);
+		iErrorCode = OOXA_find_method(local_KVXPKU_singleton_object, "KVXPKU:", 0, 0x3D1F35A1, (int(**))&pKVXPKU_isim_get_wafer_map);
 	}
 	else
 	{

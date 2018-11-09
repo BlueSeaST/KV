@@ -19,6 +19,7 @@
 //#include<stdbool.h> // 在base.h中有bool的定义
 #include<string.h>
 
+#include<KVXT_tc.h>
 #include<KVXT_extern.h>
 #include<base.h>
 #include<KVXAxLOTxPAR_tc.h>
@@ -33,7 +34,6 @@
 
 
 /*-------------------- 宏定义 --------------------*/
-#define _CRT_SECURE_NO_WARNINGS
 
 
 
@@ -334,7 +334,7 @@ int KVXT_isim_set_high_precision_SA_levelling(KVXT_local_OOXA_local_KVXT_singlet
 	bool high_precision_levelling); // 返回值默认0
 
 int KVXT_isim_set_iVSA_fallback_shapes(KVXT_local_OOXA_local_KVXT_singleton_object * local_OOXA_local_KVXT_singleton_object,
-	WPxCHUCK_chuck_id_enum *chuck_id, 
+	WPxCHUCK_chuck_id_enum chuck_id, 
 	KVXT_iVSA_plate_fallback_shape *fallback_shape_TIS1_p, 
 	KVXT_iVSA_plate_fallback_shape *fallback_shape_TIS2_p); // 返回值默认0
 

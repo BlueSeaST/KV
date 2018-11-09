@@ -20,18 +20,19 @@
 #include <string.h>
 #include <stdio.h> 
 
+#include <KVXTxMC_tc.h>
 #include<KVXTxMC_extern.h>
+#include<base.h>
 #include <THXA.h>
 #include <ERXA.h>
 #include <OOXA.h>
 #include <PLXA.h>
 
 #include <KVXT_tc.h>
-#include <KVXTxMC_tc.h>
 
 
 /*-------------------- 宏定义 --------------------*/
-#define _CRT_SECURE_NO_WARNINGS
+
 
 
 
@@ -46,9 +47,10 @@
 
 typedef struct
 {
-	char unk_1[0x10];
-	char component[2];  //"KV"
-	char unk_2[0x5D];
+	// 这个在.got表里可以看到结构体内容
+	char unk_s0x0[0x4];
+	char unk_s0x4[0xC];
+	char component[0x60];
 }KVXTxMC_singleton_object;
 
 

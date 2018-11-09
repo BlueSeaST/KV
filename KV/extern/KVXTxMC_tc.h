@@ -302,37 +302,78 @@ typedef KVXTxMC_SUSD_params KVXTxMC__set_SUSD_params_SUSD_correction_params[0x2]
 /*--------------------DD Interfaces --------------------*/
 
 //TBD函数返回值类型、参数传值or指针不确定-_-
-void KVXTxMC_load(void);
-int KVXTxMC_save(const KVXTxMC__save_id *id);
-int KVXTxMC_get_WM_scaninout_GLC_candidate_area_extension_params(KVXTxMC_WM_scaninout_GLC_candidate_area_extension_params *extensions_p);
-int KVXTxMC_set_WM_scaninout_GLC_candidate_area_extension_params(const KVXTxMC_WM_scaninout_GLC_candidate_area_extension_params *extensions_p);
-int KVXTxMC_get_WM_scaninout_plane_area_params(KVXTxMC_WM_scaninout_minimum_scan_plane_area_params *scaninout_plane_area_params_p);
-int KVXTxMC_set_WM_scaninout_plane_area_params(const KVXTxMC_WM_scaninout_minimum_scan_plane_area_params *scaninout_plane_area_params_p);
-int KVXTxMC_get_machine_constants(KVXTxMC_MACH_CONST_STRUCT *mach_const_p);
-int KVXTxMC_get_ag_ls_chuck_resist_offsets(const int *chuck_ix,
-	KVXTxMC_AG_LS_resist_offsets_mcs *ag_ls_resist_offsets);
-int KVXTxMC_set_ag_ls_chuck_resist_offsets(const int *chuck_ix,
-	const KVXTxMC_AG_LS_resist_offsets_mcs *ag_ls_resist_offsets);
-int KVXTxMC_get_SUSD_params(KVXTxMC__get_SUSD_params_SUSD_correction_params *SUSD_correction_params);
-int KVXTxMC_set_SUSD_params(const KVXTxMC__set_SUSD_params_SUSD_correction_params *SUSD_correction_params);
-int KVXTxMC_get_iVSA_plate_PDGC(const WPxCHUCK_chuck_id_enum *chuck_id,
-	const MEXAxWAFxPLATE_wafer_level_plate *plate_id,
+//void KVXTxMC_load(void);
+//int KVXTxMC_save(const KVXTxMC__save_id *id);
+//int KVXTxMC_get_WM_scaninout_GLC_candidate_area_extension_params(KVXTxMC_WM_scaninout_GLC_candidate_area_extension_params *extensions_p);
+//int KVXTxMC_set_WM_scaninout_GLC_candidate_area_extension_params(const KVXTxMC_WM_scaninout_GLC_candidate_area_extension_params *extensions_p);
+//int KVXTxMC_get_WM_scaninout_plane_area_params(KVXTxMC_WM_scaninout_minimum_scan_plane_area_params *scaninout_plane_area_params_p);
+//int KVXTxMC_set_WM_scaninout_plane_area_params(const KVXTxMC_WM_scaninout_minimum_scan_plane_area_params *scaninout_plane_area_params_p);
+//int KVXTxMC_get_machine_constants(KVXTxMC_MACH_CONST_STRUCT *mach_const_p);
+//int KVXTxMC_get_ag_ls_chuck_resist_offsets(const int *chuck_ix,
+//	KVXTxMC_AG_LS_resist_offsets_mcs *ag_ls_resist_offsets);
+//int KVXTxMC_set_ag_ls_chuck_resist_offsets(const int *chuck_ix,
+//	const KVXTxMC_AG_LS_resist_offsets_mcs *ag_ls_resist_offsets);
+//int KVXTxMC_get_SUSD_params(KVXTxMC__get_SUSD_params_SUSD_correction_params *SUSD_correction_params);
+//int KVXTxMC_set_SUSD_params(const KVXTxMC__set_SUSD_params_SUSD_correction_params *SUSD_correction_params);
+//int KVXTxMC_get_iVSA_plate_PDGC(const WPxCHUCK_chuck_id_enum *chuck_id,
+//	const MEXAxWAFxPLATE_wafer_level_plate *plate_id,
+//	KVXTxMC_iVSA_plate_PDGC *plate_PDGC_p);
+//int KVXTxMC_set_iVSA_plate_PDGC(const WPxCHUCK_chuck_id_enum *chuck_id,
+//	const MEXAxWAFxPLATE_wafer_level_plate *plate_id,
+//	const KVXTxMC_iVSA_plate_PDGC *plate_PDGC_p);
+//int KVXTxMC_get_high_precision_XVSA_scan_mcs(KVXTxMC_high_precision_XVSA_scan *high_precision_XVSA_scan_p);
+//int KVXTxMC_get_LS_drift_correction(const WPxCHUCK_chuck_id_enum *chuck_id,
+//	KVXTxMC_LS_drift_correction *LS_drift_corr_p);
+//int KVXTxMC_set_LS_drift_correction(const WPxCHUCK_chuck_id_enum *chuck_id,
+//	const KVXTxMC_LS_drift_correction *LS_drift_corr_p);
+//int KVXTxMC_get_LS_stroke_tilt(const WPxCHUCK_chuck_id_enum *chuck_id,
+//	KVXTxMC_LS_stroke_tilt *LS_stroke_tilt_p);
+//int KVXTxMC_set_LS_stroke_tilt(const WPxCHUCK_chuck_id_enum *chuck_id,
+//	const KVXTxMC_LS_stroke_tilt *LS_stroke_tilt_p);
+//int KVXTxMC_get_fsm_ero_params(bool *ero_correction_p,
+//	double *ero_dist_edge_p);
+//int KVXTxMC_get_AGILE_ref_meas_mcs(KVXTxMC_agile_reference_measurement_mcs *agile_ref_meas_params);
+
+// 翻译函数的声明
+int KVXTxMC_set_iVSA_plate_PDGC(WPxCHUCK_chuck_id_enum chuck_id, MEXAxWAFxPLATE_wafer_level_plate plate_id,
 	KVXTxMC_iVSA_plate_PDGC *plate_PDGC_p);
-int KVXTxMC_set_iVSA_plate_PDGC(const WPxCHUCK_chuck_id_enum *chuck_id,
-	const MEXAxWAFxPLATE_wafer_level_plate *plate_id,
-	const KVXTxMC_iVSA_plate_PDGC *plate_PDGC_p);
-int KVXTxMC_get_high_precision_XVSA_scan_mcs(KVXTxMC_high_precision_XVSA_scan *high_precision_XVSA_scan_p);
-int KVXTxMC_get_LS_drift_correction(const WPxCHUCK_chuck_id_enum *chuck_id,
-	KVXTxMC_LS_drift_correction *LS_drift_corr_p);
-int KVXTxMC_set_LS_drift_correction(const WPxCHUCK_chuck_id_enum *chuck_id,
-	const KVXTxMC_LS_drift_correction *LS_drift_corr_p);
-int KVXTxMC_get_LS_stroke_tilt(const WPxCHUCK_chuck_id_enum *chuck_id,
-	KVXTxMC_LS_stroke_tilt *LS_stroke_tilt_p);
-int KVXTxMC_set_LS_stroke_tilt(const WPxCHUCK_chuck_id_enum *chuck_id,
-	const KVXTxMC_LS_stroke_tilt *LS_stroke_tilt_p);
-int KVXTxMC_get_fsm_ero_params(bool *ero_correction_p,
-	double *ero_dist_edge_p);
+
+int KVXTxMC_get_iVSA_plate_PDGC(WPxCHUCK_chuck_id_enum chuck_id, MEXAxWAFxPLATE_wafer_level_plate plate_id,
+	KVXTxMC_iVSA_plate_PDGC * plate_PDGC_p);
+
+int KVXTxMC_set_ag_ls_chuck_resist_offsets(int chuck_ix, KVXTxMC_AG_LS_resist_offsets_mcs *ag_ls_resist_offsets);
+
+int KVXTxMC_set_LS_drift_correction(WPxCHUCK_chuck_id_enum chuck_id, KVXTxMC_LS_drift_correction *LS_drift_corr_p);
+
+int KVXTxMC_get_LS_drift_correction(WPxCHUCK_chuck_id_enum chuck_id, KVXTxMC_LS_drift_correction * LS_drift_corr_p);
+
+int KVXTxMC_set_LS_stroke_tilt(WPxCHUCK_chuck_id_enum chuck_id, KVXTxMC_LS_stroke_tilt *LS_stroke_tilt_p);
+
+int KVXTxMC_get_ag_ls_chuck_resist_offsets(int chuck_ix, KVXTxMC_AG_LS_resist_offsets_mcs *ag_ls_resist_offsets);
+
+int KVXTxMC_set_WM_scaninout_GLC_candidate_area_extension_params(KVXTxMC_WM_scaninout_GLC_candidate_area_extension_params *extensions_p);
+
+int KVXTxMC_get_fsm_ero_params(bool *ero_correction_p, double *ero_dist_edge_p);
+
+int KVXTxMC_set_WM_scaninout_plane_area_params(KVXTxMC_WM_scaninout_minimum_scan_plane_area_params *scaninout_plane_area_params_p);
+
+int KVXTxMC_set_SUSD_params(KVXTxMC__set_SUSD_params_SUSD_correction_params *SUSD_correction_params);
+
+int KVXTxMC_get_LS_stroke_tilt(WPxCHUCK_chuck_id_enum chuck_id, KVXTxMC_LS_stroke_tilt *LS_stroke_tilt_p);
+
+int KVXTxMC_save(KVXTxMC__save_id *id);
+
+int KVXTxMC_get_SUSD_params(KVXTxMC__get_SUSD_params_SUSD_correction_params *SUSD_correction_params);
+
+int KVXTxMC_get_WM_scaninout_GLC_candidate_area_extension_params(KVXTxMC_WM_scaninout_GLC_candidate_area_extension_params *extensions_p);
+
 int KVXTxMC_get_AGILE_ref_meas_mcs(KVXTxMC_agile_reference_measurement_mcs *agile_ref_meas_params);
+
+int KVXTxMC_get_machine_constants(KVXTxMC_MACH_CONST_STRUCT *mach_const_p);
+
+int KVXTxMC_get_WM_scaninout_plane_area_params(KVXTxMC_WM_scaninout_minimum_scan_plane_area_params *scaninout_plane_area_params_p);
+
+int KVXTxMC_get_high_precision_XVSA_scan_mcs(KVXTxMC_high_precision_XVSA_scan * high_precision_XVSA_scan_p);
 
 
 

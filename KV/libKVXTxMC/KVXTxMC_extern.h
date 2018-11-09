@@ -15,7 +15,6 @@
 #define _KVXTxMC_EXTERN_H_
 
 /*-------------------- м╥нд╪Ч --------------------*/
-#include<KVXTxMC.h>
 #include <base.h>
 
 

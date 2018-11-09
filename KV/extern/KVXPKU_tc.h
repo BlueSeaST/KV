@@ -35,13 +35,22 @@
 /*--------------------DD Interfaces --------------------*/
 
 //TBD函数返回值类型、参数传值or指针不确定-_-
-int KVXPKU_get_wafer_map(const WPxCHUCK_chuck_id_enum *chuck_id,
-	KWXA_wafer_map *wafer_map_p);
-int KVXPKU_get_wafermap_fingerprints(const WPxCHUCK_chuck_id_enum *chuck_id,
+//int KVXPKU_get_wafer_map(const WPxCHUCK_chuck_id_enum *chuck_id,
+//	KWXA_wafer_map *wafer_map_p);
+//int KVXPKU_get_wafermap_fingerprints(const WPxCHUCK_chuck_id_enum *chuck_id,
+//	bool *fingerprints_available,
+//	KWXA_fingerprint_mapping_list *fingerprint_mapping_list,
+//	KWXA_small_wafer_map *wafermap_fingerprints);
+
+// 翻译函数的声明
+int KVXPKU_get_wafermap_fingerprints(const WPxCHUCK_chuck_id_enum chuck_id,
 	bool *fingerprints_available,
 	KWXA_fingerprint_mapping_list *fingerprint_mapping_list,
 	KWXA_small_wafer_map *wafermap_fingerprints);
 
+// 函数名：KVXPKU_get_wafer_map
+int KVXPKU_get_wafer_map(const WPxCHUCK_chuck_id_enum chuck_id,
+	KWXA_wafer_map *wafer_map_p);
 
 
 #endif // _KVXPKU_TC_H_

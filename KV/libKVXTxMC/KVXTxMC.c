@@ -30,7 +30,7 @@
 
 /*----------------------- 全局变量声明 -----------------------*/
 
-KVXTxMC_singleton_object *local_KVXTxMC_singleton_object; 
+KVXTxMC_singleton_object *local_KVXTxMC_singleton_object;
 
 
 
@@ -161,7 +161,10 @@ int KVXTxMC_set_iVSA_plate_PDGC(WPxCHUCK_chuck_id_enum chuck_id, MEXAxWAFxPLATE_
 	KVXTxMC_iVSA_plate_PDGC *plate_PDGC_p)
 {
 	KVXTxMC_unk_1 * req_msg_data = NULL;
-	int(*pKVXTxMC_isim_set_iVSA_plate_PDGC)(KVXTxMC_singleton_object *local_KVXTxMC_singleton_object, WPxCHUCK_chuck_id_enum chuck_id, MEXAxWAFxPLATE_wafer_level_plate plate_id, KVXTxMC_iVSA_plate_PDGC * plate_PDGC_p) = NULL;
+	int(*pKVXTxMC_isim_set_iVSA_plate_PDGC)(KVXTxMC_singleton_object *local_KVXTxMC_singleton_object,
+		WPxCHUCK_chuck_id_enum chuck_id,
+		MEXAxWAFxPLATE_wafer_level_plate plate_id,
+		KVXTxMC_iVSA_plate_PDGC * plate_PDGC_p) = NULL;
 	int iErrorCode = 0;  //
 	char *rep_msg_data = NULL;
 	int act_len = 0;
@@ -200,7 +203,7 @@ int KVXTxMC_set_iVSA_plate_PDGC(WPxCHUCK_chuck_id_enum chuck_id, MEXAxWAFxPLATE_
 	if (THXAcheckSimMode("KV", THXA_SIM_MODE_1) == 0)
 	{
 		//loc_4C90
-		iErrorCode = OOXA_find_method(local_KVXTxMC_singleton_object, "KVXTxMC:", 0xC, 0xADEBC27, &pKVXTxMC_isim_set_iVSA_plate_PDGC);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_KVXTxMC_singleton_object, "KVXTxMC:", 0xC, 0xADEBC27, (int(**))&pKVXTxMC_isim_set_iVSA_plate_PDGC);
 	}
 	else
 	{
@@ -272,7 +275,7 @@ int KVXTxMC_set_iVSA_plate_PDGC(WPxCHUCK_chuck_id_enum chuck_id, MEXAxWAFxPLATE_
 	req_msg_data->plate_id = plate_id;
 	memcpy(req_msg_data->plate_PDGC_p, plate_PDGC_p, 0xD8);
 
-	iErrorCode = OOXA_send_receive(local_KVXTxMC_singleton_object, "KVXTxMC:", 0xC, 0xADEBC27, req_msg_data, 0xE0, &rep_msg_data, &act_len, -1, 0x96);
+	iErrorCode = OOXA_send_receive((OOXA_object_t*)local_KVXTxMC_singleton_object, "KVXTxMC:", 0xC, 0xADEBC27, req_msg_data, 0xE0, &rep_msg_data, &act_len, -1, 0x96);
 	if (iErrorCode != 0)
 	{
 		//loc_4DBC iErrorCode= o5
@@ -326,7 +329,7 @@ int KVXTxMC_set_iVSA_plate_PDGC(WPxCHUCK_chuck_id_enum chuck_id, MEXAxWAFxPLATE_
 
 }
 
-int KVXTxMC_get_iVSA_plate_PDGC(WPxCHUCK_chuck_id_enum chuck_id, MEXAxWAFxPLATE_wafer_level_plate plate_id, 
+int KVXTxMC_get_iVSA_plate_PDGC(WPxCHUCK_chuck_id_enum chuck_id, MEXAxWAFxPLATE_wafer_level_plate plate_id,
 	KVXTxMC_iVSA_plate_PDGC * plate_PDGC_p)
 {
 
@@ -374,7 +377,7 @@ int KVXTxMC_get_iVSA_plate_PDGC(WPxCHUCK_chuck_id_enum chuck_id, MEXAxWAFxPLATE_
 	if (THXAcheckSimMode("KV", THXA_SIM_MODE_1) == 0)
 	{
 		//loc_47BC
-		iErrorCode = OOXA_find_method(local_KVXTxMC_singleton_object, "KVXTxMC:", 0xB, 0x4C713156, &pKVXTxMC_isim_get_iVSA_plate_PDGC);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_KVXTxMC_singleton_object, "KVXTxMC:", 0xB, 0x4C713156, (void**)&pKVXTxMC_isim_get_iVSA_plate_PDGC);
 	}
 	else
 	{
@@ -465,7 +468,7 @@ int KVXTxMC_get_iVSA_plate_PDGC(WPxCHUCK_chuck_id_enum chuck_id, MEXAxWAFxPLATE_
 	req_msg_data->chuck_id = chuck_id;
 	req_msg_data->chuck_id = plate_id;
 
-	iErrorCode = OOXA_send_receive(local_KVXTxMC_singleton_object, "KVXTxMC:", 0xB, 0x4C713156, req_msg_data, 8, &rep_msg_data, &act_len, -1, 0x96);
+	iErrorCode = OOXA_send_receive((OOXA_object_t*)local_KVXTxMC_singleton_object, "KVXTxMC:", 0xB, 0x4C713156, req_msg_data, 8, &rep_msg_data, &act_len, -1, 0x96);
 	if (iErrorCode != 0)
 	{
 		//loc_48E8 iErrorCode = o5
@@ -569,7 +572,7 @@ int KVXTxMC_set_ag_ls_chuck_resist_offsets(int chuck_ix, KVXTxMC_AG_LS_resist_of
 	if (THXAcheckSimMode("KV", THXA_SIM_MODE_1) == 0) // loc_3CA4
 	{
 		//loc_3CA4
-		iErrorCode = OOXA_find_method(local_KVXTxMC_singleton_object, "KVXTxMC:", 8, 0x31BCF9C2, &pKVXTxMC_isim_set_ag_ls_chuck_resist_offsets);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_KVXTxMC_singleton_object, "KVXTxMC:", 8, 0x31BCF9C2, (void**)&pKVXTxMC_isim_set_ag_ls_chuck_resist_offsets);
 	}
 	else
 	{
@@ -603,7 +606,7 @@ int KVXTxMC_set_ag_ls_chuck_resist_offsets(int chuck_ix, KVXTxMC_AG_LS_resist_of
 			//loc_3E48
 			THXAtrace("KV", 2, "KVXTxMC_set_ag_ls_chuck_resist_offsets", "< %s ()=%R", local_KVXTxMC_singleton_object->component, iErrorCode);
 		}
-		else{
+		else {
 			//loc_3DD4
 			THXAdataRequest("KV", 5, "KVXTxMC_set_ag_ls_chuck_resist_offsets", 0, "%d", &iErrorCode);
 			THXAtrace("KV", 2, "KVXTxMC_set_ag_ls_chuck_resist_offsets", "< %s ()=%R", local_KVXTxMC_singleton_object->component, iErrorCode);
@@ -625,7 +628,7 @@ int KVXTxMC_set_ag_ls_chuck_resist_offsets(int chuck_ix, KVXTxMC_AG_LS_resist_of
 			//loc_3E48
 			THXAtrace("KV", 2, "KVXTxMC_set_ag_ls_chuck_resist_offsets", "< %s ()=%R", local_KVXTxMC_singleton_object->component, iErrorCode);
 		}
-		else{
+		else {
 			//loc_3DD4
 			THXAdataRequest("KV", 5, "KVXTxMC_set_ag_ls_chuck_resist_offsets", 0, "%d", &iErrorCode);
 			THXAtrace("KV", 2, "KVXTxMC_set_ag_ls_chuck_resist_offsets", "< %s ()=%R", local_KVXTxMC_singleton_object->component, iErrorCode);
@@ -638,7 +641,7 @@ int KVXTxMC_set_ag_ls_chuck_resist_offsets(int chuck_ix, KVXTxMC_AG_LS_resist_of
 	req_msg_data->a = chuck_ix;
 	memcpy(req_msg_data->ag_ls_resist_offsets, ag_ls_resist_offsets, 0x48);
 
-	iErrorCode = OOXA_send_receive(local_KVXTxMC_singleton_object, "KVXTxMC:", 8, 0x31BCF9C2, req_msg_data, 0x50, &rep_msg_data, &act_len, -1, 0x96);
+	iErrorCode = OOXA_send_receive((OOXA_object_t*)local_KVXTxMC_singleton_object, "KVXTxMC:", 8, 0x31BCF9C2, req_msg_data, 0x50, &rep_msg_data, &act_len, -1, 0x96);
 	if (iErrorCode != 0)
 	{
 		//loc_3DC4
@@ -650,7 +653,7 @@ int KVXTxMC_set_ag_ls_chuck_resist_offsets(int chuck_ix, KVXTxMC_AG_LS_resist_of
 			//loc_3E48
 			THXAtrace("KV", 2, "KVXTxMC_set_ag_ls_chuck_resist_offsets", "< %s ()=%R", local_KVXTxMC_singleton_object->component, iErrorCode);
 		}
-		else{
+		else {
 			//loc_3DD4
 			THXAdataRequest("KV", 5, "KVXTxMC_set_ag_ls_chuck_resist_offsets", 0, "%d", &iErrorCode);
 			THXAtrace("KV", 2, "KVXTxMC_set_ag_ls_chuck_resist_offsets", "< %s ()=%R", local_KVXTxMC_singleton_object->component, iErrorCode);
@@ -679,7 +682,7 @@ int KVXTxMC_set_ag_ls_chuck_resist_offsets(int chuck_ix, KVXTxMC_AG_LS_resist_of
 		//loc_3E48
 		THXAtrace("KV", 2, "KVXTxMC_set_ag_ls_chuck_resist_offsets", "< %s ()=%R", local_KVXTxMC_singleton_object->component, iErrorCode);
 	}
-	else{
+	else {
 		//loc_3DD4
 		THXAdataRequest("KV", 5, "KVXTxMC_set_ag_ls_chuck_resist_offsets", 0, "%d", &iErrorCode);
 		THXAtrace("KV", 2, "KVXTxMC_set_ag_ls_chuck_resist_offsets", "< %s ()=%R", local_KVXTxMC_singleton_object->component, iErrorCode);
@@ -692,7 +695,7 @@ int KVXTxMC_set_ag_ls_chuck_resist_offsets(int chuck_ix, KVXTxMC_AG_LS_resist_of
 int KVXTxMC_set_LS_drift_correction(WPxCHUCK_chuck_id_enum chuck_id, KVXTxMC_LS_drift_correction *LS_drift_corr_p)
 {
 	KVXTxMC_unk_4 * req_msg_data = NULL; //var_4
-	int(*pKVXTxMC_isim_set_LS_drift_correction)(KVXTxMC_singleton_object *local_KVXTxMC_singleton_object, WPxCHUCK_chuck_id_enum chuck_id, 
+	int(*pKVXTxMC_isim_set_LS_drift_correction)(KVXTxMC_singleton_object *local_KVXTxMC_singleton_object, WPxCHUCK_chuck_id_enum chuck_id,
 		KVXTxMC_LS_drift_correction * LS_drift_corr_p) = NULL;  //var_8
 	int iErrorCode = 0;  //var_C 
 	char * rep_msg_data = NULL; // var_10
@@ -732,7 +735,7 @@ int KVXTxMC_set_LS_drift_correction(WPxCHUCK_chuck_id_enum chuck_id, KVXTxMC_LS_
 	if (THXAcheckSimMode("KV", THXA_SIM_MODE_1) == 0)
 	{
 		//loc_57E8
-		iErrorCode = OOXA_find_method(local_KVXTxMC_singleton_object, "KVXTxMC:", 0xF, 0x7DF79248, &pKVXTxMC_isim_set_LS_drift_correction);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_KVXTxMC_singleton_object, "KVXTxMC:", 0xF, 0x7DF79248, (void**)&pKVXTxMC_isim_set_LS_drift_correction);
 	}
 	else
 	{
@@ -802,7 +805,7 @@ int KVXTxMC_set_LS_drift_correction(WPxCHUCK_chuck_id_enum chuck_id, KVXTxMC_LS_
 	req_msg_data->chuck_id = chuck_id;
 	memcpy(req_msg_data->LS_drift_corr_p, LS_drift_corr_p, 0x60);
 
-	iErrorCode = OOXA_send_receive(local_KVXTxMC_singleton_object, "KVXTxMC:", 0xF, 0x7DF79248, req_msg_data, 0x68, &rep_msg_data, &act_len, -1, 0x96);
+	iErrorCode = OOXA_send_receive((OOXA_object_t*)local_KVXTxMC_singleton_object, "KVXTxMC:", 0xF, 0x7DF79248, req_msg_data, 0x68, &rep_msg_data, &act_len, -1, 0x96);
 	if (iErrorCode != 0)
 	{
 		//loc_5908 iErrorCode = o5
@@ -902,7 +905,7 @@ int KVXTxMC_get_LS_drift_correction(WPxCHUCK_chuck_id_enum chuck_id, KVXTxMC_LS_
 	if (THXAcheckSimMode("KV", THXA_SIM_MODE_1) == 0)
 	{
 		//loc_537C
-		iErrorCode = OOXA_find_method(local_KVXTxMC_singleton_object, "KVXTxMC:", 0xE, 0x292CE017, &pKVXTxMC_isim_get_LS_drift_correction);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_KVXTxMC_singleton_object, "KVXTxMC:", 0xE, 0x292CE017, (void**)&pKVXTxMC_isim_get_LS_drift_correction);
 	}
 	else
 	{
@@ -985,7 +988,7 @@ int KVXTxMC_get_LS_drift_correction(WPxCHUCK_chuck_id_enum chuck_id, KVXTxMC_LS_
 	}
 
 	*req_msg_data = chuck_id;
-	iErrorCode = OOXA_send_receive(local_KVXTxMC_singleton_object, "KVXTxMC:", 0xE, 0x292CE017, req_msg_data, 4, &rep_msg_data, &act_len, -1, 0x96);
+	iErrorCode = OOXA_send_receive((OOXA_object_t*)local_KVXTxMC_singleton_object, "KVXTxMC:", 0xE, 0x292CE017, req_msg_data, 4, &rep_msg_data, &act_len, -1, 0x96);
 	if (iErrorCode != 0)
 	{
 		//loc_549C iErrorCode = o5
@@ -1088,7 +1091,7 @@ int KVXTxMC_set_LS_stroke_tilt(WPxCHUCK_chuck_id_enum chuck_id, KVXTxMC_LS_strok
 	if (THXAcheckSimMode("KV", THXA_SIM_MODE_1) == 0)
 	{
 		//loc_5F90
-		iErrorCode = OOXA_find_method(local_KVXTxMC_singleton_object, "KVXTxMC:", 0x11, 0x2B9805F9, &pKVXTxMC_isim_set_LS_stroke_tilt);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_KVXTxMC_singleton_object, "KVXTxMC:", 0x11, 0x2B9805F9, (void**)&pKVXTxMC_isim_set_LS_stroke_tilt);
 	}
 	else
 	{
@@ -1154,7 +1157,7 @@ int KVXTxMC_set_LS_stroke_tilt(WPxCHUCK_chuck_id_enum chuck_id, KVXTxMC_LS_strok
 	req_msg_data->chuck_id = chuck_id;
 	req_msg_data->LS_stroke_tilt_p = LS_stroke_tilt_p;
 
-	iErrorCode = OOXA_send_receive(local_KVXTxMC_singleton_object, "KVXTxMC:", 0x11, 0x2B9805F9, req_msg_data, 0x10, &rep_msg_data, &act_len, -1, 0x96);
+	iErrorCode = OOXA_send_receive((OOXA_object_t*)local_KVXTxMC_singleton_object, "KVXTxMC:", 0x11, 0x2B9805F9, req_msg_data, 0x10, &rep_msg_data, &act_len, -1, 0x96);
 	if (iErrorCode != 0)
 	{
 		//loc_60A8 iErrorCode = o5
@@ -1252,7 +1255,7 @@ int KVXTxMC_get_ag_ls_chuck_resist_offsets(int chuck_ix, KVXTxMC_AG_LS_resist_of
 	if (THXAcheckSimMode("KV", THXA_SIM_MODE_1) == 0)
 	{
 		//loc_3878
-		iErrorCode = OOXA_find_method(local_KVXTxMC_singleton_object, "KVXTxMC:", 7, 0x557774AF, &pKVXTxMC_isim_get_ag_ls_chuck_resist_offsets);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_KVXTxMC_singleton_object, "KVXTxMC:", 7, 0x557774AF, (void**)&pKVXTxMC_isim_get_ag_ls_chuck_resist_offsets);
 	}
 	else
 	{
@@ -1336,7 +1339,7 @@ int KVXTxMC_get_ag_ls_chuck_resist_offsets(int chuck_ix, KVXTxMC_AG_LS_resist_of
 	}
 
 	*req_msg_data = chuck_ix;
-	iErrorCode = OOXA_send_receive(local_KVXTxMC_singleton_object, "KVXTxMC:", 7, 0x557774AF, req_msg_data, 4, &rep_msg_data, &act_len, -1, 0x96);
+	iErrorCode = OOXA_send_receive((OOXA_object_t*)local_KVXTxMC_singleton_object, "KVXTxMC:", 7, 0x557774AF, req_msg_data, 4, &rep_msg_data, &act_len, -1, 0x96);
 	if (iErrorCode != 0)
 	{
 		//loc_3998  iErrorCode =o5
@@ -1434,7 +1437,7 @@ int KVXTxMC_set_WM_scaninout_GLC_candidate_area_extension_params(KVXTxMC_WM_scan
 	if (THXAcheckSimMode("KV", THXA_SIM_MODE_1) == 0)
 	{
 		//loc_2ACC
-		iErrorCode = OOXA_find_method(local_KVXTxMC_singleton_object, "KVXTxMC:", 3, 0x6F23A9F1, &pKVXTxMC_isim_set_WM_scaninout_GLC_candidate_area_extension_params);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_KVXTxMC_singleton_object, "KVXTxMC:", 3, 0x6F23A9F1, (void**)&pKVXTxMC_isim_set_WM_scaninout_GLC_candidate_area_extension_params);
 	}
 	else
 	{
@@ -1507,7 +1510,7 @@ int KVXTxMC_set_WM_scaninout_GLC_candidate_area_extension_params(KVXTxMC_WM_scan
 	req_msg_data->extension_x_pos = extensions_p->extension_x_pos;
 	req_msg_data->extension_y_neg = extensions_p->extension_y_neg;
 	req_msg_data->extension_y_pos = extensions_p->extension_y_pos;
-	iErrorCode = OOXA_send_receive(local_KVXTxMC_singleton_object, "KVXTxMC:", 3, 0x6F23A9F1, req_msg_data, 0x20, &rep_msg_data, &act_len, -1, 0x96);
+	iErrorCode = OOXA_send_receive((OOXA_object_t*)local_KVXTxMC_singleton_object, "KVXTxMC:", 3, 0x6F23A9F1, req_msg_data, 0x20, &rep_msg_data, &act_len, -1, 0x96);
 	if (iErrorCode == 0)  //iErrorCode != 0 ->loc_2BF0
 	{
 		//loc_2BF0 iErrorCode = o5
@@ -1615,7 +1618,7 @@ int KVXTxMC_get_fsm_ero_params(bool *ero_correction_p, double *ero_dist_edge_p)
 	if (THXAcheckSimMode("KV", THXA_SIM_MODE_1) == 0)
 	{
 		//loc_62A8
-		iErrorCode = OOXA_find_method(local_KVXTxMC_singleton_object, "KVXTxMC:", 0x12, 0x43A7C820, &pKVXTxMC_isim_get_fsm_ero_params);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_KVXTxMC_singleton_object, "KVXTxMC:", 0x12, 0x43A7C820, (void**)&pKVXTxMC_isim_get_fsm_ero_params);
 	}
 	else
 	{
@@ -1716,7 +1719,7 @@ int KVXTxMC_get_fsm_ero_params(bool *ero_correction_p, double *ero_dist_edge_p)
 		return iErrorCode;
 	}
 
-	iErrorCode = OOXA_send_receive(local_KVXTxMC_singleton_object, "KVXTxMC:", 0x12, 0x43A7C820, req_msg_data, 0, &rep_msg_data, &act_len, -1, 0x96);
+	iErrorCode = OOXA_send_receive((OOXA_object_t*)local_KVXTxMC_singleton_object, "KVXTxMC:", 0x12, 0x43A7C820, req_msg_data, 0, &rep_msg_data, &act_len, -1, 0x96);
 	if (iErrorCode != 0)
 	{
 		//loc_63C4  iErrorCode = o5
@@ -1828,7 +1831,7 @@ int KVXTxMC_set_WM_scaninout_plane_area_params(KVXTxMC_WM_scaninout_minimum_scan
 	if (THXAcheckSimMode("KV", THXA_SIM_MODE_1) == 0)
 	{
 		//loc_31B0
-		iErrorCode = OOXA_find_method(local_KVXTxMC_singleton_object, "KVXTxMC:", 5, 0x34BF5663, &pKVXTxMC_isim_set_WM_scaninout_plane_area_params);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_KVXTxMC_singleton_object, "KVXTxMC:", 5, 0x34BF5663, (void**)&pKVXTxMC_isim_set_WM_scaninout_plane_area_params);
 	}
 	else
 	{
@@ -1897,7 +1900,7 @@ int KVXTxMC_set_WM_scaninout_plane_area_params(KVXTxMC_WM_scaninout_minimum_scan
 
 	req_msg_data->min_x_size = scaninout_plane_area_params_p->min_x_size;
 	req_msg_data->min_y_size = scaninout_plane_area_params_p->min_y_size;
-	iErrorCode = OOXA_send_receive(local_KVXTxMC_singleton_object, "KVXTxMC:", 5, 0x34BF5663, req_msg_data, 0x10, &rep_msg_data, &act_len, -1, 0x96);
+	iErrorCode = OOXA_send_receive((OOXA_object_t*)local_KVXTxMC_singleton_object, "KVXTxMC:", 5, 0x34BF5663, req_msg_data, 0x10, &rep_msg_data, &act_len, -1, 0x96);
 	if (iErrorCode != 0)
 	{
 		//loc_32C4 iErrorCode = o5
@@ -1990,7 +1993,7 @@ int KVXTxMC_set_SUSD_params(KVXTxMC__set_SUSD_params_SUSD_correction_params *SUS
 	if (THXAcheckSimMode("KV", THXA_SIM_MODE_1) == 0)
 	{
 		//loc_43CC
-		iErrorCode = OOXA_find_method(local_KVXTxMC_singleton_object, "KVXTxMC:", 0xA, 0x87103FF, &pKVXTxMC_isim_set_SUSD_params);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_KVXTxMC_singleton_object, "KVXTxMC:", 0xA, 0x87103FF, (void**)&pKVXTxMC_isim_set_SUSD_params);
 	}
 	else
 	{
@@ -2057,7 +2060,7 @@ int KVXTxMC_set_SUSD_params(KVXTxMC__set_SUSD_params_SUSD_correction_params *SUS
 	}
 
 	memcpy(req_msg_data, SUSD_correction_params, 0x60);
-	iErrorCode = OOXA_send_receive(local_KVXTxMC_singleton_object, "KVXTxMC:", 0xA, 0x87103FF, req_msg_data, 0x60, &rep_msg_data, &act_len, -1, 0x96);
+	iErrorCode = OOXA_send_receive((OOXA_object_t*)local_KVXTxMC_singleton_object, "KVXTxMC:", 0xA, 0x87103FF, req_msg_data, 0x60, &rep_msg_data, &act_len, -1, 0x96);
 	if (iErrorCode != 0)
 	{
 		//loc_44DC iErrorCode = o5
@@ -2158,7 +2161,7 @@ int KVXTxMC_get_LS_stroke_tilt(WPxCHUCK_chuck_id_enum chuck_id, KVXTxMC_LS_strok
 	if (THXAcheckSimMode("KV", THXA_SIM_MODE_1) == 0)
 	{
 		//loc_5B60
-		iErrorCode = OOXA_find_method(local_KVXTxMC_singleton_object, "KVXTxMC:", 0x10, 0xE77ADAE, &pKVXTxMC_isim_get_LS_stroke_tilt);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_KVXTxMC_singleton_object, "KVXTxMC:", 0x10, 0xE77ADAE, (void**)&pKVXTxMC_isim_get_LS_stroke_tilt);
 	}
 	else
 	{
@@ -2243,7 +2246,7 @@ int KVXTxMC_get_LS_stroke_tilt(WPxCHUCK_chuck_id_enum chuck_id, KVXTxMC_LS_strok
 	}
 
 	*req_msg_data = chuck_id;
-	iErrorCode = OOXA_send_receive(local_KVXTxMC_singleton_object, "KVXTxMC:", 0x10, 0xE77ADAE, req_msg_data, 4, &rep_msg_data, &act_len, -1, 0x96);
+	iErrorCode = OOXA_send_receive((OOXA_object_t*)local_KVXTxMC_singleton_object, "KVXTxMC:", 0x10, 0xE77ADAE, req_msg_data, 4, &rep_msg_data, &act_len, -1, 0x96);
 	if (iErrorCode != 0)
 	{
 		//loc_5C78 o0 = iErrorCode
@@ -2341,7 +2344,7 @@ int KVXTxMC_save(KVXTxMC__save_id *id)
 	if (THXAcheckSimMode("KV", THXA_SIM_MODE_1) == 0)
 	{
 		//loc_23E4
-		iErrorCode = OOXA_find_method(local_KVXTxMC_singleton_object, "KVXTxMC:", 1, 0xF3C336, &pKVXTxMC_isim_save);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_KVXTxMC_singleton_object, "KVXTxMC:", 1, 0xF3C336, (void**)&pKVXTxMC_isim_save);
 	}
 	else
 	{
@@ -2407,7 +2410,7 @@ int KVXTxMC_save(KVXTxMC__save_id *id)
 
 	rep_msg_data[0x400] = '\0';
 	strncpy((char*)req_msg_data, (char*)id, 0x400);
-	iErrorCode = OOXA_send_receive(local_KVXTxMC_singleton_object, "KVXTxMC:", 1, 0xF3C336, req_msg_data, 0x408, &rep_msg_data, &act_len, -1, 0x96);
+	iErrorCode = OOXA_send_receive((OOXA_object_t*)local_KVXTxMC_singleton_object, "KVXTxMC:", 1, 0xF3C336, req_msg_data, 0x408, &rep_msg_data, &act_len, -1, 0x96);
 	if (iErrorCode != 0)
 	{
 		//loc_24FC iErrorCode = o5
@@ -2474,7 +2477,7 @@ int KVXTxMC_get_SUSD_params(KVXTxMC__get_SUSD_params_SUSD_correction_params *SUS
 
 	if (!(iErrorCode != 0 || SUSD_correction_params != NULL))
 	{
-		iErrorCode = OOXA_allocate_parameter(0x60, &SUSD_correction_params, &isOk);
+		iErrorCode = OOXA_allocate_parameter(0x60, (void**)&SUSD_correction_params, &isOk);
 	}
 	//loc_3F50
 	THXAtrace("KV", 2, "KVXTxMC_get_SUSD_params", "> %s ()", local_KVXTxMC_singleton_object->component);
@@ -2487,7 +2490,7 @@ int KVXTxMC_get_SUSD_params(KVXTxMC__get_SUSD_params_SUSD_correction_params *SUS
 		//loc_41E4
 		if (isOk != FALSE)
 		{
-			PLXAmem_free(&SUSD_correction_params);
+			PLXAmem_free((void**)&SUSD_correction_params);
 		}
 		//loc_41FC
 		THXAtraceTP("KV", 0x4B56F682);
@@ -2497,7 +2500,7 @@ int KVXTxMC_get_SUSD_params(KVXTxMC__get_SUSD_params_SUSD_correction_params *SUS
 	if (THXAcheckSimMode("KV", THXA_SIM_MODE_1) == 0)
 	{
 		//loc_3FCC
-		iErrorCode = OOXA_find_method(local_KVXTxMC_singleton_object, "KVXTxMC:", 9, 0x5F5DB796, &pKVXTxMC_isim_get_SUSD_params);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_KVXTxMC_singleton_object, "KVXTxMC:", 9, 0x5F5DB796, (void**)&pKVXTxMC_isim_get_SUSD_params);
 	}
 	else
 	{
@@ -2515,7 +2518,7 @@ int KVXTxMC_get_SUSD_params(KVXTxMC__get_SUSD_params_SUSD_correction_params *SUS
 		//loc_41E4
 		if (isOk != FALSE)
 		{
-			PLXAmem_free(&SUSD_correction_params);
+			PLXAmem_free((void**)&SUSD_correction_params);
 		}
 		//loc_41FC
 		THXAtraceTP("KV", 0x4B56F682);
@@ -2545,7 +2548,7 @@ int KVXTxMC_get_SUSD_params(KVXTxMC__get_SUSD_params_SUSD_correction_params *SUS
 		//loc_41E4
 		if (isOk != FALSE)
 		{
-			PLXAmem_free(&SUSD_correction_params);
+			PLXAmem_free((void**)&SUSD_correction_params);
 		}
 		//loc_41FC
 		THXAtraceTP("KV", 0x4B56F682);
@@ -2573,14 +2576,14 @@ int KVXTxMC_get_SUSD_params(KVXTxMC__get_SUSD_params_SUSD_correction_params *SUS
 		//loc_41E4
 		if (isOk != FALSE)
 		{
-			PLXAmem_free(&SUSD_correction_params);
+			PLXAmem_free((void**)&SUSD_correction_params);
 		}
 		//loc_41FC
 		THXAtraceTP("KV", 0x4B56F682);
 		return iErrorCode;
 	}
 
-	iErrorCode = OOXA_send_receive(local_KVXTxMC_singleton_object, "KVXTxMC:", 9, 0x5F5DB796, req_msg_data, 0, &rep_msg_data, &act_len, -1, 0x96);
+	iErrorCode = OOXA_send_receive((OOXA_object_t*)local_KVXTxMC_singleton_object, "KVXTxMC:", 9, 0x5F5DB796, req_msg_data, 0, (void**)&rep_msg_data, &act_len, -1, 0x96);
 	if (iErrorCode != 0)
 	{
 		//loc_40DC iErrorCode = o5
@@ -2601,7 +2604,7 @@ int KVXTxMC_get_SUSD_params(KVXTxMC__get_SUSD_params_SUSD_correction_params *SUS
 		//loc_41E4
 		if (isOk != FALSE)
 		{
-			PLXAmem_free(&SUSD_correction_params);
+			PLXAmem_free((void**)&SUSD_correction_params);
 		}
 		//loc_41FC
 		THXAtraceTP("KV", 0x4B56F682);
@@ -2629,7 +2632,7 @@ int KVXTxMC_get_SUSD_params(KVXTxMC__get_SUSD_params_SUSD_correction_params *SUS
 	//loc_41E4
 	if (isOk != FALSE)
 	{
-		PLXAmem_free(&SUSD_correction_params);
+		PLXAmem_free((void**)&SUSD_correction_params);
 	}
 	//loc_41FC
 	THXAtraceTP("KV", 0x4B56F682);
@@ -2672,7 +2675,7 @@ int KVXTxMC_get_WM_scaninout_GLC_candidate_area_extension_params(KVXTxMC_WM_scan
 	if (THXAcheckSimMode("KV", THXA_SIM_MODE_1) == 0)
 	{
 		//loc_26FC
-		iErrorCode = OOXA_find_method(local_KVXTxMC_singleton_object, "KVXTxMC:", 2, 0x35B38E50, &pKVXTxMC_isim_get_WM_scaninout_GLC_candidate_area_extension_params);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_KVXTxMC_singleton_object, "KVXTxMC:", 2, 0x35B38E50, (void**)&pKVXTxMC_isim_get_WM_scaninout_GLC_candidate_area_extension_params);
 	}
 	else
 	{
@@ -2746,7 +2749,7 @@ int KVXTxMC_get_WM_scaninout_GLC_candidate_area_extension_params(KVXTxMC_WM_scan
 		return iErrorCode;
 	}
 
-	iErrorCode = OOXA_send_receive(local_KVXTxMC_singleton_object, "KVXTxMC:", 2, 0x35B38E50, req_msg_data, 0, &rep_msg_data, &act_len, -1, 0x96);
+	iErrorCode = OOXA_send_receive((OOXA_object_t*)local_KVXTxMC_singleton_object, "KVXTxMC:", 2, 0x35B38E50, req_msg_data, 0, &rep_msg_data, &act_len, -1, 0x96);
 	if (iErrorCode != 0)
 	{
 		//loc_281C  iErrorCode = o5
@@ -2836,7 +2839,7 @@ int KVXTxMC_get_AGILE_ref_meas_mcs(KVXTxMC_agile_reference_measurement_mcs *agil
 	if (THXAcheckSimMode("KV", THXA_SIM_MODE_1) == 0)
 	{
 		//loc_6624
-		iErrorCode = OOXA_find_method(local_KVXTxMC_singleton_object, "KVXTxMC:", 0x13, 0x44E65ED6, &pKVXTxMC_isim_get_AGILE_ref_meas_mcs);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_KVXTxMC_singleton_object, "KVXTxMC:", 0x13, 0x44E65ED6, (void**)&pKVXTxMC_isim_get_AGILE_ref_meas_mcs);
 	}
 	else
 	{
@@ -2911,7 +2914,7 @@ int KVXTxMC_get_AGILE_ref_meas_mcs(KVXTxMC_agile_reference_measurement_mcs *agil
 		return iErrorCode;
 	}
 
-	iErrorCode = OOXA_send_receive(local_KVXTxMC_singleton_object, "KVXTxMC:", 0x13, 0x44E65ED6, req_msg_data, 0, &rep_msg_data, &act_len, -1, 0x96);
+	iErrorCode = OOXA_send_receive((OOXA_object_t*)local_KVXTxMC_singleton_object, "KVXTxMC:", 0x13, 0x44E65ED6, req_msg_data, 0, &rep_msg_data, &act_len, -1, 0x96);
 	if (iErrorCode != 0)
 	{
 		//loc_6744  iErrorCode = o5
@@ -3004,7 +3007,7 @@ int KVXTxMC_get_machine_constants(KVXTxMC_MACH_CONST_STRUCT *mach_const_p)
 	if (THXAcheckSimMode("KV", THXA_SIM_MODE_1) == 0)
 	{
 		//loc_34C4
-		iErrorCode = OOXA_find_method(local_KVXTxMC_singleton_object, "KVXTxMC:", 6, 0x5B17421A, &pKVXTxMC_isim_get_machine_constants);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_KVXTxMC_singleton_object, "KVXTxMC:", 6, 0x5B17421A, (void**)&pKVXTxMC_isim_get_machine_constants);
 	}
 	else
 	{
@@ -3081,7 +3084,7 @@ int KVXTxMC_get_machine_constants(KVXTxMC_MACH_CONST_STRUCT *mach_const_p)
 		return iErrorCode;
 	}
 
-	iErrorCode = OOXA_send_receive(local_KVXTxMC_singleton_object, "KVXTxMC:", 6, 0x5B17421A, req_msg_data, 0, &rep_msg_data, &act_len, -1, 0x96);
+	iErrorCode = OOXA_send_receive((OOXA_object_t*)local_KVXTxMC_singleton_object, "KVXTxMC:", 6, 0x5B17421A, req_msg_data, 0, &rep_msg_data, &act_len, -1, 0x96);
 	if (iErrorCode)
 	{
 		//loc_35D4 iErrorCode = o5
@@ -3170,7 +3173,7 @@ int KVXTxMC_get_WM_scaninout_plane_area_params(KVXTxMC_WM_scaninout_minimum_scan
 	if (THXAcheckSimMode("KV", THXA_SIM_MODE_1) == 0)
 	{
 		//loc_2DF0
-		iErrorCode = OOXA_find_method(local_KVXTxMC_singleton_object, "KVXTxMC:", 4, 0x461FEC3A, &pKVXTxMC_isim_get_WM_scaninout_plane_area_params);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_KVXTxMC_singleton_object, "KVXTxMC:", 4, 0x461FEC3A, (void**)&pKVXTxMC_isim_get_WM_scaninout_plane_area_params);
 	}
 	else
 	{
@@ -3246,7 +3249,7 @@ int KVXTxMC_get_WM_scaninout_plane_area_params(KVXTxMC_WM_scaninout_minimum_scan
 		return iErrorCode;
 	}
 
-	iErrorCode = OOXA_send_receive(local_KVXTxMC_singleton_object, "KVXTxMC:", 4, 0x461FEC3A, req_msg_data, 0, &rep_msg_data, &act_len, -1, 0x96);
+	iErrorCode = OOXA_send_receive((OOXA_object_t*)local_KVXTxMC_singleton_object, "KVXTxMC:", 4, 0x461FEC3A, req_msg_data, 0, &rep_msg_data, &act_len, -1, 0x96);
 	if (iErrorCode != 0)
 	{
 		//loc_2F00 iErrorCode = o5
@@ -3300,7 +3303,6 @@ int KVXTxMC_get_WM_scaninout_plane_area_params(KVXTxMC_WM_scaninout_minimum_scan
 
 }
 
-
 int KVXTxMC_get_high_precision_XVSA_scan_mcs(KVXTxMC_high_precision_XVSA_scan * high_precision_XVSA_scan_p)
 {
 	char * req_msg_data = NULL;  //var_4
@@ -3333,7 +3335,7 @@ int KVXTxMC_get_high_precision_XVSA_scan_mcs(KVXTxMC_high_precision_XVSA_scan * 
 	if (THXAcheckSimMode("KV", THXA_SIM_MODE_1) == 0)
 	{
 		//loc_4F98
-		iErrorCode = OOXA_find_method(local_KVXTxMC_singleton_object, "KVXTxMC:", 0xD, 0x2C0F9989, &pKVXTxMC_isim_get_high_precision_XVSA_scan_mcs);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_KVXTxMC_singleton_object, "KVXTxMC:", 0xD, 0x2C0F9989, (void**)&pKVXTxMC_isim_get_high_precision_XVSA_scan_mcs);
 	}
 	else
 	{
@@ -3405,7 +3407,7 @@ int KVXTxMC_get_high_precision_XVSA_scan_mcs(KVXTxMC_high_precision_XVSA_scan * 
 		return iErrorCode;
 	}
 
-	iErrorCode = OOXA_send_receive(local_KVXTxMC_singleton_object, "KVXTxMC:", 0xD, 0x2C0F9989, req_msg_data, 0, &rep_msg_data, &act_len, -1, 0x96);
+	iErrorCode = OOXA_send_receive((OOXA_object_t*)local_KVXTxMC_singleton_object, "KVXTxMC:", 0xD, 0x2C0F9989, req_msg_data, 0, &rep_msg_data, &act_len, -1, 0x96);
 	if (iErrorCode != 0)
 	{
 		//loc_50B0 iErrorCode = o5
@@ -3458,10 +3460,6 @@ int KVXTxMC_get_high_precision_XVSA_scan_mcs(KVXTxMC_high_precision_XVSA_scan * 
 	return iErrorCode;
 }
 
-
-
-
-
 int KVXTxMC_isim_get_machine_constants(KVXTxMC_singleton_object *local_KVXTxMC_singleton_object,
 	KVXTxMC_MACH_CONST_STRUCT *mach_const_p)
 {
@@ -3490,26 +3488,15 @@ int KVXTxMC_isim_get_machine_constants(KVXTxMC_singleton_object *local_KVXTxMC_s
 
 		THXAtrace("KV", 2, "========", "< ( {extensions:  x_pos = %.6f [mm], y_pos = %.6f [mm], x_neg = %.6f [mm], y_neg = %.6f [mm], "
 			"xy plane areas:  min_x_size = %.6f [mm], min_y_size = %.6f [mm], sa_level_high_precision_count = %d} )",
-			mach_const_p->wm_scaninout_glc_candidate_area_extension_params.extension_x_pos * 1000.0, 
+			mach_const_p->wm_scaninout_glc_candidate_area_extension_params.extension_x_pos * 1000.0,
 			mach_const_p->wm_scaninout_glc_candidate_area_extension_params.extension_y_pos * 1000.0,
 			mach_const_p->wm_scaninout_glc_candidate_area_extension_params.extension_x_neg * 1000.0,
-		    mach_const_p->wm_scaninout_glc_candidate_area_extension_params.extension_y_neg * 1000.0,
-		    mach_const_p->wm_scaninout_minimum_scan_plane_area_params.min_x_size * 1000.0,
-		    mach_const_p->wm_scaninout_minimum_scan_plane_area_params.min_y_size * 1000.0,  "@$");
+			mach_const_p->wm_scaninout_glc_candidate_area_extension_params.extension_y_neg * 1000.0,
+			mach_const_p->wm_scaninout_minimum_scan_plane_area_params.min_x_size * 1000.0,
+			mach_const_p->wm_scaninout_minimum_scan_plane_area_params.min_y_size * 1000.0, "@$");
 	}
 
 
 	THXAtrace("KV", 2, __FUNCTION__, "< ( END ) = %s", "OK");
 	return 0;
 }
-
-
-int main()
-{
-	return 0;
-}
-
-
-
-
-

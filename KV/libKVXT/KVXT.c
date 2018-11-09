@@ -75,12 +75,6 @@ int KVXT_isim_get_diagnostics(KVXT_local_OOXA_local_KVXT_singleton_object *local
 	return 0;
 }
 
-int KVXT_isim_get_GLC_capture_params(KVXT_local_OOXA_local_KVXT_singleton_object *local_OOXA_local_KVXT_singleton_object,
-	KVXA_capture_params *capture_params_p)
-{
-	return 0;
-}
-
 int KVXT_isim_get_GLC_meas_results(KVXT_local_OOXA_local_KVXT_singleton_object *local_OOXA_local_KVXT_singleton_object,
 	KVXA_meas_results *glc_meas_results)
 {
@@ -126,18 +120,6 @@ int KVXT_isim_get_le_spot_xyz(KVXT_local_OOXA_local_KVXT_singleton_object *local
 	return 0;
 }
 
-int KVXT_isim_get_lot_GLC_params(KVXT_local_OOXA_local_KVXT_singleton_object *local_OOXA_local_KVXT_singleton_object,
-	KVXAxLOTxPAR_GLC_lot_data *pKVXAxLOTxPAR_GLC_lot_data)
-{
-	return 0;
-}
-
-int KVXT_isim_get_lot_WM_params(KVXT_local_OOXA_local_KVXT_singleton_object *local_OOXA_local_KVXT_singleton_object,
-	KVXAxLOTxPAR_WM_lot_data_t *pKVXAxLOTxPAR_WM_lot_data_t)
-{
-	return 0;
-}
-
 int KVXT_isim_get_LS_drift_SOSI_update_needed(KVXT_local_OOXA_local_KVXT_singleton_object *local_OOXA_local_KVXT_singleton_object,
 	WPxCHUCK_chuck_id_enum chuck_id,
 	bool *KVXT_isim_set_plate_wedgeLS_drift_SOSI_corr_update_needed_p)
@@ -147,37 +129,6 @@ int KVXT_isim_get_LS_drift_SOSI_update_needed(KVXT_local_OOXA_local_KVXT_singlet
 
 int KVXT_isim_get_period_XVSA(KVXT_local_OOXA_local_KVXT_singleton_object *local_OOXA_local_KVXT_singleton_object,
 	MBXA_period_struct *period)
-{
-	return 0;
-}
-
-int KVXT_isim_get_plate_drift_refs(KVXT_local_OOXA_local_KVXT_singleton_object *local_OOXA_local_KVXT_singleton_object,
-	WPxCHUCK_chuck_id_enum chuck_id,
-	MEXAxWAFxPLATE_wafer_level_plate plate_id,
-	KVXT_TIS_drift_ref_struct *drift_refs,
-	bool *validity)
-{
-	return 0;
-}
-
-int KVXT_isim_get_plate_level_ref_xyz(KVXT_local_OOXA_local_KVXT_singleton_object *local_OOXA_local_KVXT_singleton_object,
-	WPxCHUCK_chuck_id_enum chuck_id,
-	MEXAxWAFxPLATE_wafer_level_plate plate_id,
-	xyzvect *plate_level_ref_xyz)
-{
-	return 0;
-}
-
-int KVXT_isim_get_plate_wedge(KVXT_local_OOXA_local_KVXT_singleton_object *local_OOXA_local_KVXT_singleton_object,
-	WPxCHUCK_chuck_id_enum chuck_id,
-	MEXAxWAFxPLATE_wafer_level_plate plate_id,
-	zrxryvect *plate_wedge)
-{
-	return 0;
-}
-
-int KVXT_isim_get_SA_capture_params(KVXT_local_OOXA_local_KVXT_singleton_object *local_OOXA_local_KVXT_singleton_object,
-	KVXA_capture_params *capture_params)
 {
 	return 0;
 }
@@ -194,32 +145,9 @@ int KVXT_isim_get_SA_model_done(KVXT_local_OOXA_local_KVXT_singleton_object *loc
 	return 0;
 }
 
-int KVXT_isim_get_SA_plate_level_info(KVXT_local_OOXA_local_KVXT_singleton_object *local_OOXA_local_KVXT_singleton_object,
-	WPxCHUCK_chuck_id_enum chuck_id,
-	MEXAxWAFxPLATE_wafer_level_plate plate_id,
-	KVXA_plate_level_info *plate_level_info)
-{
-	return 0;
-}
-
-int KVXT_isim_get_wafer_map(KVXT_local_OOXA_local_KVXT_singleton_object *local_OOXA_local_KVXT_singleton_object,
-	WPxCHUCK_chuck_id_enum chuck_id,
-	KWXA_wafer_map *wafer_map_p)
-{
-	return 0;
-}
-
 int KVXT_isim_get_ws_zeroing_error_zrxry(KVXT_local_OOXA_local_KVXT_singleton_object *local_OOXA_local_KVXT_singleton_object,
 	WPxCHUCK_chuck_id_enum chuck_id,
 	zrxryvect *ws_zeroing_error_zrxry)
-{
-	return 0;
-}
-
-int KVXT_isim_get_XVSA_scan_results(KVXT_local_OOXA_local_KVXT_singleton_object *local_OOXA_local_KVXT_singleton_object,
-	WPxCHUCK_chuck_id_enum chuck_id,
-	MEXAxWAFxPLATE_wafer_level_plate plate_id,
-	MEXAxVSA_XVSA_scan_data *scan_data)
 {
 	return 0;
 }
@@ -267,16 +195,6 @@ int KVXT_isim_retrieve_LS_drift_SOSI(KVXT_local_OOXA_local_KVXT_singleton_object
 	return 0;
 }
 
-int KVXT_isim_retrieve_XVSA_scan_data(KVXT_local_OOXA_local_KVXT_singleton_object * local_OOXA_local_KVXT_singleton_object,
-	WPxCHUCK_chuck_id_enum chuck_id,
-	MEXAxVSA_XVSA_scan_data *tis1_scan_data,
-	MEXAxVSA_XVSA_scan_data *tis2_scan_data,
-	KVXA_XVSA_chuck_model_results *xvsa_results,
-	bool *xvsa_results_valid)
-{
-	return 0;
-}
-
 int KVXT_isim_set_chuck_id(KVXT_local_OOXA_local_KVXT_singleton_object * local_OOXA_local_KVXT_singleton_object,
 	WPxCHUCK_chuck_id_enum chuck_id)
 {
@@ -292,7 +210,7 @@ int KVXT_isim_set_comp_sim_mode(KVXT_local_OOXA_local_KVXT_singleton_object * lo
 void KVXT_isim_set_context(KVXT_local_OOXA_local_KVXT_singleton_object * local_OOXA_local_KVXT_singleton_object,
 	MEXAxGL_context_list *context)
 {
-	return 0;
+	return;
 }
 int KVXT_isim_set_diagnostics(KVXT_local_OOXA_local_KVXT_singleton_object * local_OOXA_local_KVXT_singleton_object,
 	MEXAxGL_state *state)
@@ -319,7 +237,7 @@ int KVXT_isim_set_high_precision_SA_levelling(KVXT_local_OOXA_local_KVXT_singlet
 }
 
 int KVXT_isim_set_iVSA_fallback_shapes(KVXT_local_OOXA_local_KVXT_singleton_object * local_OOXA_local_KVXT_singleton_object,
-	WPxCHUCK_chuck_id_enum *chuck_id,
+	WPxCHUCK_chuck_id_enum chuck_id,
 	KVXT_iVSA_plate_fallback_shape *fallback_shape_TIS1_p,
 	KVXT_iVSA_plate_fallback_shape *fallback_shape_TIS2_p)
 {
@@ -363,30 +281,6 @@ int KVXT_isim_set_lot_WM_params(KVXT_local_OOXA_local_KVXT_singleton_object *loc
 	return 0;
 }
 
-int KVXT_isim_set_plate_drift_refs(KVXT_local_OOXA_local_KVXT_singleton_object *local_OOXA_local_KVXT_singleton_object,
-	WPxCHUCK_chuck_id_enum stage_id,
-	MEXAxWAFxPLATE_wafer_level_plate plate_id,
-	KVXT_TIS_drift_ref_struct *drift_refs,
-	bool validity)
-{
-	return 0;
-}
-
-int KVXT_isim_set_plate_level_ref_xyz(KVXT_local_OOXA_local_KVXT_singleton_object *local_OOXA_local_KVXT_singleton_object,
-	WPxCHUCK_chuck_id_enum stage_id,
-	MEXAxWAFxPLATE_wafer_level_plate plate_id,
-	xyzvect *plate_level_ref_xyz)
-{
-	return 0;
-}
-
-int KVXT_isim_set_plate_wedge(KVXT_local_OOXA_local_KVXT_singleton_object *local_OOXA_local_KVXT_singleton_object,
-	WPxCHUCK_chuck_id_enum stage_id,
-	MEXAxWAFxPLATE_wafer_level_plate plate_id,
-	zrxryvect *plate_wedge)
-{
-	return 0;
-}
 int KVXT_isim_set_SA_capture_params(KVXT_local_OOXA_local_KVXT_singleton_object *local_OOXA_local_KVXT_singleton_object,
 	KVXA_capture_params *capture_params)
 {
@@ -401,14 +295,6 @@ int KVXT_isim_set_SA_level_high_precision_count(KVXT_local_OOXA_local_KVXT_singl
 
 int KVXT_isim_set_SA_model_done(KVXT_local_OOXA_local_KVXT_singleton_object *local_OOXA_local_KVXT_singleton_object,
 	bool sa_model_done)
-{
-	return 0;
-}
-
-int KVXT_isim_set_SA_plate_level_info(KVXT_local_OOXA_local_KVXT_singleton_object *local_OOXA_local_KVXT_singleton_object,
-	WPxCHUCK_chuck_id_enum chuck_id,
-	MEXAxWAFxPLATE_wafer_level_plate plate_id,
-	KVXA_plate_level_info *plate_level_info)
 {
 	return 0;
 }
@@ -430,13 +316,6 @@ int KVXT_isim_set_XVSA_scan_refs(KVXT_local_OOXA_local_KVXT_singleton_object *lo
 	WPxCHUCK_chuck_id_enum chuck_id,
 	MEXAxWAFxPLATE_wafer_level_plate plate_id,
 	MEXAxVSA_XVSA_scan_data *scan_result)
-{
-	return 0;
-}
-
-int KVXT_isim_set_XVSA_thresholds(KVXT_local_OOXA_local_KVXT_singleton_object *local_OOXA_local_KVXT_singleton_object,
-	MEXAxVSA_XVSA_thresholds *XVSA_warning_levels,
-	MEXAxVSA_XVSA_thresholds *XVSA_error_levels)
 {
 	return 0;
 }
@@ -467,7 +346,7 @@ int KVXT_flush_LS_drift_filter(WPxCHUCK_chuck_id_enum chuck_id)
 	{
 		// sethi   %hi(0x400), %g1
 		// ------>loc_E12C
-		iErrorCode = OOXA_find_method(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x29, 0x26A76485, &pKVXT_isim_flush_LS_drift_filter);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x29, 0x26A76485, (void**)&pKVXT_isim_flush_LS_drift_filter);
 	}
 	else
 	{
@@ -520,7 +399,7 @@ int KVXT_flush_LS_drift_filter(WPxCHUCK_chuck_id_enum chuck_id)
 	}
 	// .text:0000E194
 	*req_msg_data = chuck_id;
-	iErrorCode = OOXA_send_receive(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x29, 0x26A76485,
+	iErrorCode = OOXA_send_receive((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x29, 0x26A76485,
 		req_msg_data, 4, &rep_msg_data, &act_len, 0x41, 0x96);
 	if (iErrorCode != 0)
 	{
@@ -589,7 +468,7 @@ int KVXT_flush_LS_drift_SOSI_filter(WPxCHUCK_chuck_id_enum chuck_id)
 	{
 		// sethi   %hi(0x400), %g1
 		// loc_CD04
-		iErrorCode = OOXA_find_method(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x24, 0x683A75CE, &pKVXT_isim_flush_LS_drift_SOSI_filter);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x24, 0x683A75CE, (void**)&pKVXT_isim_flush_LS_drift_SOSI_filter);
 	}
 	else
 	{
@@ -643,7 +522,7 @@ int KVXT_flush_LS_drift_SOSI_filter(WPxCHUCK_chuck_id_enum chuck_id)
 	}
 	// .text:0000CD6C
 	*req_msg_data = chuck_id;
-	iErrorCode = OOXA_send_receive(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x24, 0x683A75CE,
+	iErrorCode = OOXA_send_receive((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x24, 0x683A75CE,
 		req_msg_data, 4, &rep_msg_data, &act_len, 0x41, 0x96);
 	if (iErrorCode != 0)
 	{
@@ -726,7 +605,7 @@ int KVXT_get_al_athena_zrxry(zrxryvect *al_athena_zrxry)
 	{
 		// sethi   %hi(0x400), %g1
 		// ------>loc_5F08
-		iErrorCode = OOXA_find_method(local_OOXA_local_KVXT_singleton_object, "KVXT:", 5, 0x26AC8A3B, &pKVXT_isim_get_al_athena_zrxry);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 5, 0x26AC8A3B, (void**)&pKVXT_isim_get_al_athena_zrxry);
 	}
 	else
 	{
@@ -787,7 +666,7 @@ int KVXT_get_al_athena_zrxry(zrxryvect *al_athena_zrxry)
 	if (iErrorCode == 0)
 	{
 		// .text:00005F70
-		iErrorCode = OOXA_send_receive(local_OOXA_local_KVXT_singleton_object, "KVXT:", 5, 0x26AC8A3B,
+		iErrorCode = OOXA_send_receive((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 5, 0x26AC8A3B,
 			req_msg_data, 0, &rep_msg_data, &act_len, 0x41, 0x96);
 		if (iErrorCode == 0)
 		{
@@ -864,7 +743,7 @@ int KVXT_get_chuck_id(WPxCHUCK_chuck_id_enum *chuck_id_p)
 	{
 		// sethi   %hi(0x400), %g1
 		// loc_8264
-		iErrorCode = OOXA_find_method(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0xF, 0x6BB5D038, pKVXT_isim_get_chuck_id); // 这里确定pKVXT_isim_get_chuck_id为函数指针
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0xF, 0x6BB5D038, (void**)&pKVXT_isim_get_chuck_id);
 	}
 	else
 	{
@@ -924,7 +803,7 @@ int KVXT_get_chuck_id(WPxCHUCK_chuck_id_enum *chuck_id_p)
 	if (iErrorCode == 0)
 	{
 		// .text:000082CC
-		iErrorCode = OOXA_send_receive(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0xF, 0x6BB5D038, req_msg_data, 0, &rep_msg_data, &act_len, 0x41, 0x96);
+		iErrorCode = OOXA_send_receive((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0xF, 0x6BB5D038, req_msg_data, 0, &rep_msg_data, &act_len, 0x41, 0x96);
 		if (iErrorCode == 0)
 		{
 			// .text:0000832C
@@ -1000,7 +879,7 @@ int KVXT_get_comp_sim_mode(THXA_SIM_MODE *comp_sim_mode_p)
 	{
 		// sethi   %hi(0x400), %g1
 		// ------>loc_7308
-		iErrorCode = OOXA_find_method(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0xB, 0x74B58759, &pKVXT_isim_get_comp_sim_mode);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0xB, 0x74B58759, (void**)&pKVXT_isim_get_comp_sim_mode);
 	}
 	else
 	{
@@ -1059,7 +938,7 @@ int KVXT_get_comp_sim_mode(THXA_SIM_MODE *comp_sim_mode_p)
 	if (iErrorCode == 0)
 	{
 		// .text:00007370
-		iErrorCode = OOXA_send_receive(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0xB, 0x74B58759,
+		iErrorCode = OOXA_send_receive((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0xB, 0x74B58759,
 			req_msg_data, 0, &rep_msg_data, &act_len, 0x41, 0x96);
 		if (iErrorCode == 0)
 		{
@@ -1134,7 +1013,7 @@ int KVXT_get_diagnostics(MEXAxGL_state *state)
 	{
 		// sethi   %hi(0x400), %g1
 		// ------>loc_116D0
-		iErrorCode = OOXA_find_method(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x39, 0x229C5871, &pKVXT_isim_get_diagnostics);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x39, 0x229C5871, (void**)&pKVXT_isim_get_diagnostics);
 	}
 	else
 	{
@@ -1163,7 +1042,7 @@ int KVXT_get_diagnostics(MEXAxGL_state *state)
 	{
 		// sethi   %hi(0x400), %g2
 		// ------>loc_117C8
-		iErrorCode = pKVXT_isim_get_diagnostics(local_OOXA_local_KVXT_singleton_object, state);
+		iErrorCode = pKVXT_isim_get_diagnostics(local_OOXA_local_KVXT_singleton_object, (char*)state);
 		// loc_117E0
 		// loc_117E4
 		if (iErrorCode != 0)
@@ -1192,7 +1071,7 @@ int KVXT_get_diagnostics(MEXAxGL_state *state)
 	if (iErrorCode == 0)
 	{
 		// .text:00011738
-		iErrorCode = OOXA_send_receive(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x39, 0x229C5871,
+		iErrorCode = OOXA_send_receive((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x39, 0x229C5871,
 			req_msg_data, 0, &rep_msg_data, &act_len, 0x41, 0x96);
 		if (iErrorCode == 0)
 		{
@@ -1266,7 +1145,7 @@ int KVXT_get_GLC_capture_params(KVXA_capture_params *capture_params)
 	{
 		// sethi   %hi(0x400), %g1
 		// ------>loc_F994
-		iErrorCode = OOXA_find_method(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x30, 0x61D06AAE, &pKVXT_isim_get_GLC_capture_params);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x30, 0x61D06AAE, (void**)&pKVXT_isim_get_GLC_capture_params);
 	}
 	else
 	{
@@ -1324,7 +1203,7 @@ int KVXT_get_GLC_capture_params(KVXA_capture_params *capture_params)
 	if (iErrorCode == 0)
 	{
 		// .text:0000F9FC
-		iErrorCode = OOXA_send_receive(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x30, 0x61D06AAE, req_msg_data, 0, &rep_msg_data, &act_len, 0x41, 0x96);
+		iErrorCode = OOXA_send_receive((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x30, 0x61D06AAE, req_msg_data, 0, &rep_msg_data, &act_len, 0x41, 0x96);
 		if (iErrorCode == 0)
 		{
 			// .text:0000FA5C
@@ -1423,7 +1302,7 @@ int KVXT_get_GLC_meas_results(KVXA_meas_results *glc_meas_results)
 	{
 		// sethi   %hi(0x400), %g1
 		// ------>loc_FC9C
-		iErrorCode = OOXA_find_method(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x31, 0x7AF0B839, &pKVXT_isim_get_GLC_meas_results);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x31, 0x7AF0B839, (void**)&pKVXT_isim_get_GLC_meas_results);
 	}
 	else
 	{
@@ -1499,7 +1378,7 @@ int KVXT_get_GLC_meas_results(KVXA_meas_results *glc_meas_results)
 	if (iErrorCode == 0)
 	{
 		// .text:0000FD04
-		iErrorCode = OOXA_send_receive(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x31, 0x7AF0B839,
+		iErrorCode = OOXA_send_receive((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x31, 0x7AF0B839,
 			req_msg_data, 0, &rep_msg_data, &act_len, 0x41, 0x96);
 		if (iErrorCode == 0)
 		{
@@ -1585,7 +1464,7 @@ int KVXT_get_global_wafer_wedge(zrxryvect *global_wafer_wedge)
 	{
 		// sethi   %hi(0x400), %g1
 		// ------>loc_EC28
-		iErrorCode = OOXA_find_method(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x2C, 0x1C4472B0, &pKVXT_isim_get_global_wafer_wedge);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x2C, 0x1C4472B0, (void**)&pKVXT_isim_get_global_wafer_wedge);
 	}
 	else
 	{
@@ -1651,7 +1530,7 @@ int KVXT_get_global_wafer_wedge(zrxryvect *global_wafer_wedge)
 	if (iErrorCode == 0)
 	{
 		// .text:0000EC90
-		iErrorCode = OOXA_send_receive(local_OOXA_local_KVXT_singleton_object, "KVXT;", 0x2C, 0x1C4472B0,
+		iErrorCode = OOXA_send_receive((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT;", 0x2C, 0x1C4472B0,
 			req_msg_data, 0, &rep_msg_data, &act_len, 0x41, 0x96);
 		if (iErrorCode == 0)
 		{
@@ -1726,7 +1605,7 @@ int KVXT_get_high_precision_SA_levelling(bool *high_precision_levelling_p)
 	{
 		// sethi   %hi(0x400), %g1
 		// ------>loc_A450
-		iErrorCode = OOXA_find_method(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x19, 0x1AEF78CD, &pKVXT_isim_get_high_precision_SA_levelling);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x19, 0x1AEF78CD, (void**)&pKVXT_isim_get_high_precision_SA_levelling);
 	}
 	else
 	{
@@ -1784,7 +1663,7 @@ int KVXT_get_high_precision_SA_levelling(bool *high_precision_levelling_p)
 	if (iErrorCode == 0)
 	{
 		// .text:0000A4B8
-		iErrorCode = OOXA_send_receive(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x19, 0x1AEF78CD,
+		iErrorCode = OOXA_send_receive((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x19, 0x1AEF78CD,
 			req_msg_data, 0, &rep_msg_data, &act_len, 0x41, 0x96);
 		if (iErrorCode == 0)
 		{
@@ -1898,7 +1777,7 @@ int KVXT_get_iVSA_update_needed(WPxCHUCK_chuck_id_enum chuck_id,
 	{
 		// sethi   %hi(0x400), %g1
 		// ------>loc_D098
-		iErrorCode = OOXA_find_method(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x25, 0x2E53E826, &pKVXT_isim_get_iVSA_update_needed);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x25, 0x2E53E826, (void**)&pKVXT_isim_get_iVSA_update_needed);
 	}
 	else
 	{
@@ -1976,7 +1855,7 @@ int KVXT_get_iVSA_update_needed(WPxCHUCK_chuck_id_enum chuck_id,
 	{
 		// .text:0000D100
 		*req_msg_data = chuck_id;
-		iErrorCode = OOXA_send_receive(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x25, 0x2E53E826,
+		iErrorCode = OOXA_send_receive((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x25, 0x2E53E826,
 			req_msg_data, 4, &rep_msg_data, &act_len, 0x41, 0x96);
 		if (iErrorCode == 0)
 		{
@@ -2062,7 +1941,7 @@ int KVXT_get_le_spot_id_SA(LEXAxSPOT_spot_selection_t *le_spot_id_sa)
 	{
 		// sethi   %hi(0x400), %g1
 		// ------>loc_97D0
-		iErrorCode = OOXA_find_method(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x15, 0x302FAE40, &pKVXT_isim_get_le_spot_id_SA);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x15, 0x302FAE40, (void**)&pKVXT_isim_get_le_spot_id_SA);
 	}
 	else
 	{
@@ -2124,11 +2003,11 @@ int KVXT_get_le_spot_id_SA(LEXAxSPOT_spot_selection_t *le_spot_id_sa)
 	if (iErrorCode == 0)
 	{
 		// .text:00009838
-		iErrorCode = OOXA_send_receive(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x15, 0x302FAE40, req_msg_data, 0, &rep_msg_data, &act_len, 0x41, 0x96);
+		iErrorCode = OOXA_send_receive((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x15, 0x302FAE40, req_msg_data, 0, &rep_msg_data, &act_len, 0x41, 0x96);
 		if (iErrorCode == 0)
 		{
 			// .text:00009898
-			le_spot_id_sa = *rep_msg_data;
+			*le_spot_id_sa = *rep_msg_data;
 			if (rep_msg_data != NULL)
 			{
 				// .text:000098B0
@@ -2200,7 +2079,7 @@ int KVXT_get_le_spot_id_WM(LEXAxSPOT_spot_selection_t *spot_id_p)
 	{
 		// sethi   %hi(0x400), %g1
 		// ------>loc_106C4
-		iErrorCode = OOXA_find_method(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x34, 0x3338DF28, &pKVXT_isim_get_le_spot_id_WM);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x34, 0x3338DF28, (void**)&pKVXT_isim_get_le_spot_id_WM);
 	}
 	else
 	{
@@ -2261,7 +2140,7 @@ int KVXT_get_le_spot_id_WM(LEXAxSPOT_spot_selection_t *spot_id_p)
 	if (iErrorCode == 0)
 	{
 		// .text:0001072C
-		iErrorCode = OOXA_send_receive(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x34, 0x3338DF28, req_msg_data, 0, &rep_msg_data, &act_len, 0x41, 0x96);
+		iErrorCode = OOXA_send_receive((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x34, 0x3338DF28, req_msg_data, 0, &rep_msg_data, &act_len, 0x41, 0x96);
 		if (iErrorCode == 0)
 		{
 			// .text:0001078C
@@ -2350,7 +2229,7 @@ int KVXT_get_le_spot_xyz(LEXAxSPOT_spot_id_t spot_id,
 	{
 		// sethi   %hi(0x400), %g1
 		// ------>loc_5888
-		iErrorCode = OOXA_find_method(local_OOXA_local_KVXT_singleton_object, "KVXT:", 3, 0x7FDA46F3, &local_OOXA_local_KVXT_singleton_object);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 3, 0x7FDA46F3, &local_OOXA_local_KVXT_singleton_object);
 	}
 	else
 	{
@@ -2412,7 +2291,7 @@ int KVXT_get_le_spot_xyz(LEXAxSPOT_spot_id_t spot_id,
 	{
 		// .text:000058F0
 		*req_msg_data = spot_id;
-		iErrorCode = OOXA_send_receive(local_OOXA_local_KVXT_singleton_object, "KVXT:", 3, 0x7FDA46F3, req_msg_data, 4, &rep_msg_data, &act_len, 0x41, 0x96);
+		iErrorCode = OOXA_send_receive((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 3, 0x7FDA46F3, req_msg_data, 4, &rep_msg_data, &act_len, 0x41, 0x96);
 		if (iErrorCode == 0)
 		{
 			// .text:0000595C
@@ -2499,7 +2378,7 @@ int KVXT_get_lot_GLC_params(KVXAxLOTxPAR_GLC_lot_data *glc_lot_data)
 	{
 		// sethi   %hi(0x400), %g1
 		// ------>loc_F2DC
-		iErrorCode = OOXA_find_method(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x2E, 0x3B74080E, &pKVXT_isim_get_lot_GLC_params);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x2E, 0x3B74080E, (void**)&pKVXT_isim_get_lot_GLC_params);
 	}
 	else
 	{
@@ -2575,7 +2454,7 @@ int KVXT_get_lot_GLC_params(KVXAxLOTxPAR_GLC_lot_data *glc_lot_data)
 	if (iErrorCode == 0)
 	{
 		// .text:0000F344
-		iErrorCode = OOXA_send_receive(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x2E, 0x3B74080E,
+		iErrorCode = OOXA_send_receive((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x2E, 0x3B74080E,
 			req_msg_data, 0, &rep_msg_data, &act_len, 0x41, 0x96);
 		if (iErrorCode == 0)
 		{
@@ -2671,7 +2550,7 @@ int KVXT_get_lot_WM_params(KVXAxLOTxPAR_WM_lot_data_t *wm_lot_data)
 	{
 		// sethi   %hi(0x400), %g1
 		// ------>loc_10CE8
-		iErrorCode = OOXA_find_method(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x36, 0x2A64566C, &pKVXT_isim_get_lot_WM_params);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x36, 0x2A64566C, (void**)&pKVXT_isim_get_lot_WM_params);
 	}
 	else
 	{
@@ -2747,7 +2626,7 @@ int KVXT_get_lot_WM_params(KVXAxLOTxPAR_WM_lot_data_t *wm_lot_data)
 	if (iErrorCode == 0)
 	{
 		// .text:00010D50
-		iErrorCode = OOXA_send_receive(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x36, 0x2A64566C, req_msg_data, 0, &rep_msg_data, &act_len, 0x41, 0x96);
+		iErrorCode = OOXA_send_receive((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x36, 0x2A64566C, req_msg_data, 0, &rep_msg_data, &act_len, 0x41, 0x96);
 		if (iErrorCode == 0)
 		{
 			// .text:00010DB0
@@ -2846,7 +2725,7 @@ int KVXT_get_LS_drift_SOSI_update_needed(WPxCHUCK_chuck_id_enum chuck_id,
 	{
 		// sethi   %hi(0x400), %g1
 		// ------>loc_C99C
-		iErrorCode = OOXA_find_method(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x23, 0x43585E40, &pKVXT_isim_get_LS_drift_SOSI_update_needed);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x23, 0x43585E40, (void**)&pKVXT_isim_get_LS_drift_SOSI_update_needed);
 	}
 	else
 	{
@@ -2908,7 +2787,7 @@ int KVXT_get_LS_drift_SOSI_update_needed(WPxCHUCK_chuck_id_enum chuck_id,
 	{
 		// .text:0000CA04
 		*req_msg_data = chuck_id;
-		iErrorCode = OOXA_send_receive(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x23, 0x43585E40,
+		iErrorCode = OOXA_send_receive((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x23, 0x43585E40,
 			req_msg_data, 4, &rep_msg_data, &act_len, 0x41, 0x96);
 		if (iErrorCode == 0)
 		{
@@ -2987,7 +2866,7 @@ int KVXT_get_period_XVSA(MBXA_period_struct *period)
 	{
 		// sethi   %hi(0x400), %g1
 		// ------>loc_BEEC
-		iErrorCode = OOXA_find_method(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x20, 0x56CEF61D, &pKVXT_isim_get_period_XVSA);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x20, 0x56CEF61D, (void**)&pKVXT_isim_get_period_XVSA);
 	}
 	else
 	{
@@ -3048,7 +2927,7 @@ int KVXT_get_period_XVSA(MBXA_period_struct *period)
 	if (iErrorCode == 0)
 	{
 		// .text:0000BF54
-		iErrorCode = OOXA_send_receive(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x20, 0x56CEF61D, req_msg_data, 0, &req_msg_data, &act_len, 0x41, 0x96);
+		iErrorCode = OOXA_send_receive((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x20, 0x56CEF61D, req_msg_data, 0, &req_msg_data, &act_len, 0x41, 0x96);
 		if (iErrorCode == 0)
 		{
 			// .text:0000BFB4
@@ -3167,7 +3046,7 @@ int KVXT_get_plate_drift_refs(WPxCHUCK_chuck_id_enum stage_id,
 	{
 		// sethi   %hi(0x400), %g1
 		// ------>loc_76FC
-		iErrorCode = OOXA_find_method(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0xC, 0x745041D6, &pKVXT_isim_get_plate_drift_refs);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0xC, 0x745041D6, (void**)&pKVXT_isim_get_plate_drift_refs);
 	}
 	else
 	{
@@ -3243,7 +3122,7 @@ int KVXT_get_plate_drift_refs(WPxCHUCK_chuck_id_enum stage_id,
 		// .text:00007764
 		req_msg_data->chuck_id = stage_id;
 		req_msg_data->plate_id = plate_id;
-		iErrorCode = OOXA_send_receive(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0xC, 0x745041D6,
+		iErrorCode = OOXA_send_receive((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0xC, 0x745041D6,
 			req_msg_data, 8, &rep_msg_data, &act_len, 0x41, 0x96);
 		if (iErrorCode == 0)
 		{
@@ -3345,7 +3224,7 @@ int KVXT_get_plate_level_ref_xyz(WPxCHUCK_chuck_id_enum stage_id,
 	{
 		// sethi   %hi(0x400), %g1
 		// ------>loc_5108
-		iErrorCode = OOXA_find_method(local_OOXA_local_KVXT_singleton_object, "KVXT:", 1, 0x16457AF1, &pKVXT_isim_get_plate_level_ref_xyz);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 1, 0x16457AF1, (void**)&pKVXT_isim_get_plate_level_ref_xyz);
 	}
 	else
 	{
@@ -3408,7 +3287,7 @@ int KVXT_get_plate_level_ref_xyz(WPxCHUCK_chuck_id_enum stage_id,
 		// .text:00005170
 		req_msg_data->chuck_id = stage_id; // 这里stage_id用的chuck_id的类型
 		req_msg_data->plate_id = plate_id;
-		iErrorCode = OOXA_send_receive(local_OOXA_local_KVXT_singleton_object, "KVXT:", 1, 0x16457AF1, req_msg_data, 8, &rep_msg_data, &act_len, 0x41, 0x96);
+		iErrorCode = OOXA_send_receive((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 1, 0x16457AF1, req_msg_data, 8, &rep_msg_data, &act_len, 0x41, 0x96);
 		if (iErrorCode == 0)
 		{
 			// .text:000051E4
@@ -3503,7 +3382,7 @@ int KVXT_get_plate_wedge(WPxCHUCK_chuck_id_enum stage_id,
 	{
 		// sethi   %hi(0x400), %g1
 		// ------>loc_671C
-		iErrorCode = OOXA_find_method(local_OOXA_local_KVXT_singleton_object, "KVXT:", 7, 0x10CA0B0B, &pKVXT_isim_get_plate_wedge);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 7, 0x10CA0B0B, (void**)&pKVXT_isim_get_plate_wedge);
 	}
 	else
 	{
@@ -3566,7 +3445,7 @@ int KVXT_get_plate_wedge(WPxCHUCK_chuck_id_enum stage_id,
 		// .text:00006784
 		req_msg_data->chuck_id = stage_id;
 		req_msg_data->plate_id = plate_id;
-		iErrorCode = OOXA_send_receive(local_OOXA_local_KVXT_singleton_object, "KVXT:", 7,
+		iErrorCode = OOXA_send_receive((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 7,
 			0x10CA0B0B, req_msg_data, 8, &rep_msg_data, &act_len, 0x41, 0x96);
 		if (iErrorCode == 0)
 		{
@@ -3646,7 +3525,7 @@ int KVXT_get_SA_capture_params(KVXA_capture_params *capture_params)
 	{
 		// sethi   %hi(0x400), %g1
 		// -------->loc_9E48
-		iErrorCode = OOXA_find_method(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x17, 0xF32131C, &pKVXT_isim_get_SA_capture_params);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x17, 0xF32131C, (void**)&pKVXT_isim_get_SA_capture_params);
 	}
 	else
 	{
@@ -3707,7 +3586,7 @@ int KVXT_get_SA_capture_params(KVXA_capture_params *capture_params)
 	if (iErrorCode == 0)
 	{
 		// .text:00009EB0
-		iErrorCode = OOXA_send_receive(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x17, 0xF32131C,
+		iErrorCode = OOXA_send_receive((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x17, 0xF32131C,
 			req_msg_data, 0, &rep_msg_data, &act_len, 0x41, 0x96);
 		if (iErrorCode == 0)
 		{
@@ -3799,7 +3678,7 @@ int KVXT_get_SA_level_high_precision_count(int *precision_count)
 	{
 		// sethi   %hi(0x400), %g1
 		// ------>loc_6D30
-		iErrorCode = OOXA_find_method(local_OOXA_local_KVXT_singleton_object, "KVXT:", 9, 0xA641FF2, &pKVXT_isim_get_SA_level_high_precision_count);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 9, 0xA641FF2, (void**)&pKVXT_isim_get_SA_level_high_precision_count);
 	}
 	else
 	{
@@ -3860,7 +3739,7 @@ int KVXT_get_SA_level_high_precision_count(int *precision_count)
 	if (iErrorCode == 0)
 	{
 		// .text:00006D98
-		iErrorCode = OOXA_send_receive(local_OOXA_local_KVXT_singleton_object, "KVXT:", 9, 0xA641FF2, req_msg_data, 0, &rep_msg_data, &act_len, 0x41, 0x96);
+		iErrorCode = OOXA_send_receive((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 9, 0xA641FF2, req_msg_data, 0, &rep_msg_data, &act_len, 0x41, 0x96);
 		if (iErrorCode == 0)
 		{
 			// .text:00006DF8
@@ -3936,7 +3815,7 @@ int KVXT_get_SA_model_done(bool *sa_model_done)
 	{
 		// sethi   %hi(0x400), %g1
 		// ------>loc_AA28
-		iErrorCode = OOXA_find_method(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x1B, 0x6B525E63, &pKVXT_isim_get_SA_model_done);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x1B, 0x6B525E63, (void**)&pKVXT_isim_get_SA_model_done);
 	}
 	else
 	{
@@ -3997,7 +3876,7 @@ int KVXT_get_SA_model_done(bool *sa_model_done)
 	if (iErrorCode == 0)
 	{
 		// .text:0000AA90
-		iErrorCode = OOXA_send_receive(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x1B, 0x6B525E63,
+		iErrorCode = OOXA_send_receive((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x1B, 0x6B525E63,
 			req_msg_data, 0, &rep_msg_data, &act_len, 0x41, 0x96);
 		if (iErrorCode == 0)
 		{
@@ -4086,7 +3965,7 @@ int KVXT_get_SA_plate_level_info(WPxCHUCK_chuck_id_enum chuck_id,
 	{
 		// sethi   %hi(0x400), %g1
 		// ------>loc_8A68
-		iErrorCode = OOXA_find_method(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x11, 0x4CEB4298, &local_OOXA_local_KVXT_singleton_object);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x11, 0x4CEB4298, &local_OOXA_local_KVXT_singleton_object);
 	}
 	else
 	{
@@ -4149,7 +4028,7 @@ int KVXT_get_SA_plate_level_info(WPxCHUCK_chuck_id_enum chuck_id,
 		// .text:00008AD0
 		req_msg_data->chuck_id = chuck_id;
 		req_msg_data->plate_id = plate_id;
-		iErrorCode = OOXA_send_receive(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x11, 0x4CEB4298, req_msg_data, 8, &rep_msg_data, &act_len, 0x41, 0x96);
+		iErrorCode = OOXA_send_receive((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x11, 0x4CEB4298, req_msg_data, 8, &rep_msg_data, &act_len, 0x41, 0x96);
 		if (iErrorCode == 0)
 		{
 			// .text:00008B44
@@ -4246,7 +4125,7 @@ int KVXT_get_wafer_map(WPxCHUCK_chuck_id_enum chuck_id,
 	{
 		// sethi   %hi(0x400), %g1
 		// ------>loc_100B0
-		iErrorCode = OOXA_find_method(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x32, 0x3D1F35A1, &pKVXT_isim_get_wafer_map);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x32, 0x3D1F35A1, (void**)&pKVXT_isim_get_wafer_map);
 	}
 	else
 	{
@@ -4310,7 +4189,7 @@ int KVXT_get_wafer_map(WPxCHUCK_chuck_id_enum chuck_id,
 	{
 		// .text:00010118
 		*req_msg_data = chuck_id;
-		iErrorCode = OOXA_send_receive(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x32, 0x3D1F35A1,
+		iErrorCode = OOXA_send_receive((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x32, 0x3D1F35A1,
 			req_msg_data, 4, &rep_msg_data, &act_len, 0x41, 0x96);
 		if (iErrorCode == 0)
 		{
@@ -4409,7 +4288,7 @@ int KVXT_get_ws_zeroing_error_zrxry(WPxCHUCK_chuck_id_enum chuck_id,
 	{
 		// sethi   %hi(0x400), %g1
 		// ------>loc_91B8
-		iErrorCode = OOXA_find_method(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x13, 0x2447948E, &local_OOXA_local_KVXT_singleton_object);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x13, 0x2447948E, &local_OOXA_local_KVXT_singleton_object);
 	}
 	else
 	{
@@ -4473,7 +4352,7 @@ int KVXT_get_ws_zeroing_error_zrxry(WPxCHUCK_chuck_id_enum chuck_id,
 	{
 		// .text:00009220
 		*req_msg_data = chuck_id;
-		iErrorCode = OOXA_send_receive(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x13, 0x2447948E, req_msg_data, 4, &rep_msg_data, &act_len, 0x41, 0x96);
+		iErrorCode = OOXA_send_receive((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x13, 0x2447948E, req_msg_data, 4, &rep_msg_data, &act_len, 0x41, 0x96);
 		if (iErrorCode == 0)
 		{
 			// .text:0000928C
@@ -4569,7 +4448,7 @@ int KVXT_get_XVSA_scan_results(WPxCHUCK_chuck_id_enum chuck_id,
 	{
 		// sethi   %hi(0x400), %g1
 		// ------>loc_B340
-		iErrorCode = OOXA_find_method(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x1D, 0x5EF6CC44, &pKVXT_isim_get_XVSA_scan_results);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x1D, 0x5EF6CC44, (void**)&pKVXT_isim_get_XVSA_scan_results);
 	}
 	else
 	{
@@ -4632,7 +4511,7 @@ int KVXT_get_XVSA_scan_results(WPxCHUCK_chuck_id_enum chuck_id,
 		// .text:0000B3A8
 		req_msg_data->chuck_id = chuck_id;
 		req_msg_data->plate_id = plate_id;
-		iErrorCode = OOXA_send_receive(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x1D, 0x5EF6CC44, req_msg_data, 8, &rep_msg_data, &act_len, 0x41, 0x96);
+		iErrorCode = OOXA_send_receive((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x1D, 0x5EF6CC44, req_msg_data, 8, &rep_msg_data, &act_len, 0x41, 0x96);
 		if (iErrorCode == 0)
 		{
 			// .text:0000B41C
@@ -4694,7 +4573,7 @@ int KVXT_invalidate_iVSA_fallback_shapes(WPxCHUCK_chuck_id_enum chuck_id)
 	{
 		// sethi   %hi(0x400), %g1
 		// ------>loc_DE28
-		iErrorCode = OOXA_find_method(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x28, 0x26E4BE61, &local_OOXA_local_KVXT_singleton_object);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x28, 0x26E4BE61, &local_OOXA_local_KVXT_singleton_object);
 	}
 	else
 	{
@@ -4760,7 +4639,7 @@ int KVXT_invalidate_iVSA_fallback_shapes(WPxCHUCK_chuck_id_enum chuck_id)
 	}
 	// .text:0000DE90
 	*req_msg_data = chuck_id;
-	iErrorCode = OOXA_send_receive(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x28, 0x26E4BE61,
+	iErrorCode = OOXA_send_receive((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x28, 0x26E4BE61,
 		req_msg_data, 4, &rep_msg_data, &act_len, 0x41, 0x96);
 	if (iErrorCode != 0)
 	{
@@ -4892,7 +4771,7 @@ int KVXT_isim_get_lot_GLC_params(KVXT_local_OOXA_local_KVXT_singleton_object *lo
 	// sethi   %hi(0x400), %g1
 	// ------>loc_16B20
 	THXAtrace("KV", 2, "========", "> ( glc_lot_data_p = %s )", "*");
-	iErrorCode = DDXAxVARARRAY_ensure_length("KVXAxLOTxPAR:GLC_lot_data", glc_lot_data_p, 1);
+	iErrorCode = DDXAxVARARRAY_ensure_length("KVXAxLOTxPAR:GLC_lot_data", (DDXAxVARARRAY_type_t*)glc_lot_data_p, 1);
 	if (iErrorCode == 0)
 	{
 		// mov     %o0, %i0
@@ -4972,7 +4851,7 @@ int KVXT_isim_get_lot_WM_params(KVXT_local_OOXA_local_KVXT_singleton_object *loc
 		THXAtrace("KV", 2, "========", "> ( wm_lot_data_p = %s )", "*");
 	}
 	// .text:00016D90
-	iErrorLink = DDXAxVARARRAY_ensure_length("KVXAxLOTxPAR:WM_stroke_array_t", &wm_lot_data_p->strokes, 1);
+	iErrorLink = DDXAxVARARRAY_ensure_length("KVXAxLOTxPAR:WM_stroke_array_t", (DDXAxVARARRAY_type_t*)&wm_lot_data_p->strokes, 1);
 	if (iErrorLink != 0)
 	{
 		// mov     %o0, %i0
@@ -4994,7 +4873,7 @@ int KVXT_isim_get_lot_WM_params(KVXT_local_OOXA_local_KVXT_singleton_object *loc
 		}
 		// ld      [%i1+0x70], %o1
 		// loc_16E14
-		iErrorLink = DDXAxVARARRAY_ensure_length("KVXAxLOTxPAR:WM_area_array_t", &wm_lot_data_p->strokes.array[0].areas, 1);
+		iErrorLink = DDXAxVARARRAY_ensure_length("KVXAxLOTxPAR:WM_area_array_t", (DDXAxVARARRAY_type_t*)&wm_lot_data_p->strokes.array[0].areas, 1);
 		if (iErrorLink != 0)
 		{
 			// mov     %o0, %i0
@@ -5872,7 +5751,7 @@ int KVXT_isim_set_plate_drift_refs(KVXT_local_OOXA_local_KVXT_singleton_object *
 	WPxCHUCK_chuck_id_enum chuck_id,
 	MEXAxWAFxPLATE_wafer_level_plate plate_id,
 	KVXT_TIS_drift_ref_struct *TIS_drift_refs_p,
-	bool *validity)
+	bool validity)
 {
 	THXAtrace("KV", 2, __FUNCTION__, "> ( START )");
 	if (chuck_id == 0)
@@ -6300,15 +6179,15 @@ int KVXT_isim_set_XVSA_thresholds(KVXT_local_OOXA_local_KVXT_singleton_object *l
 }
 
 // 函数名：KVXT_iVSA_to_XVSA
-int KVXT_iVSA_to_XVSA(MEXAxVSA_iVSA_level_lanes *measured_iVSA_lanes, 
-	xyzvect *plate_level_ref, 
+int KVXT_iVSA_to_XVSA(MEXAxVSA_iVSA_level_lanes *measured_iVSA_lanes,
+	xyzvect *plate_level_ref,
 	MEXAxVSA_XVSA_profile *profile)
 {
 	//MEXAxVSA_XVSA_profile * profile = profile;  //arg_4C
 	libKVXT_unk_11 * req_msg_data = NULL;   //s1
 	int(*pKVXT_isim_iVSA_to_XVSA)(KVXT_local_OOXA_local_KVXT_singleton_object * local_OOXA_local_KVXT_singleton_object,
-		MEXAxVSA_iVSA_level_lanes * measured_iVSA_lanes, 
-		xyzvect * plate_level_ref, 
+		MEXAxVSA_iVSA_level_lanes * measured_iVSA_lanes,
+		xyzvect * plate_level_ref,
 		MEXAxVSA_XVSA_profile * profile) = NULL;   //var_8
 	int iErrorCode = 0;  //var_C
 	MEXAxVSA_XVSA_profile * rep_msg_data = NULL;   //s2
@@ -6373,7 +6252,7 @@ int KVXT_iVSA_to_XVSA(MEXAxVSA_iVSA_level_lanes *measured_iVSA_lanes,
 	if (THXAcheckSimMode("KV", THXA_SIM_MODE_1) == 0)
 	{
 		//loc_E544
-		iErrorCode = OOXA_find_method(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x2A, 0x10F8DCF2, &pKVXT_isim_iVSA_to_XVSA);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x2A, 0x10F8DCF2, (void**)&pKVXT_isim_iVSA_to_XVSA);
 	}
 	else
 	{
@@ -6451,7 +6330,7 @@ int KVXT_iVSA_to_XVSA(MEXAxVSA_iVSA_level_lanes *measured_iVSA_lanes,
 	req_msg_data->plate_level_ref.y = plate_level_ref->y;
 	req_msg_data->plate_level_ref.z = plate_level_ref->z;
 
-	iErrorCode = OOXA_send_receive(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x2A, 0x10F8DCF2, 
+	iErrorCode = OOXA_send_receive((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x2A, 0x10F8DCF2,
 		req_msg_data, 0x128, &rep_msg_data, &act_len, 0x41, 0x96);
 	if (iErrorCode != 0)
 	{
@@ -6502,7 +6381,7 @@ int KVXT_iVSA_to_XVSA(MEXAxVSA_iVSA_level_lanes *measured_iVSA_lanes,
 }
 
 // 函数名：KVXT_log_stubs_get_last_error_log
-int KVXT_log_stubs_get_last_error_log(int * exception_code, 
+int KVXT_log_stubs_get_last_error_log(int * exception_code,
 	int * exception_link)
 {
 	char * req_msg_data = NULL; //var_4
@@ -6557,7 +6436,7 @@ int KVXT_log_stubs_get_last_error_log(int * exception_code,
 	if (THXAcheckSimMode("KV", THXA_SIM_MODE_1) == 0)
 	{
 		//loc_11CBC
-		iErrorCode = OOXA_find_method(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x3B, 0x1B47C472, &pKVXT_isim_log_stubs_get_last_error_log);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x3B, 0x1B47C472, (void**)&pKVXT_isim_log_stubs_get_last_error_log);
 	}
 	else
 	{
@@ -6639,7 +6518,7 @@ int KVXT_log_stubs_get_last_error_log(int * exception_code,
 		return iErrorCode;
 	}
 
-	iErrorCode = OOXA_send_receive(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x3B, 0x1B47C472, 
+	iErrorCode = OOXA_send_receive((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x3B, 0x1B47C472,
 		req_msg_data, 0, &rep_msg_data, &act_len, 0x41, 0x96);
 	if (iErrorCode != 0)
 	{
@@ -6697,9 +6576,9 @@ int KVXT_log_stubs_get_last_error_log(int * exception_code,
 }
 
 // 函数名：KVXT_model_iVSA_fallback_shapes
-int KVXT_model_iVSA_fallback_shapes(WPxCHUCK_chuck_id_enum chuck_id, 
+int KVXT_model_iVSA_fallback_shapes(WPxCHUCK_chuck_id_enum chuck_id,
 	KVXA_iVSA_level_results *level_results_TIS1_p,
-	KVXA_iVSA_level_results *level_results_TIS2_p, 
+	KVXA_iVSA_level_results *level_results_TIS2_p,
 	KVXT_iVSA_plate_fallback_shape *fallback_shape_TIS1_p,
 	KVXT_iVSA_plate_fallback_shape *fallback_shape_TIS2_p)
 {
@@ -6766,7 +6645,7 @@ int KVXT_model_iVSA_fallback_shapes(WPxCHUCK_chuck_id_enum chuck_id,
 	if (THXAcheckSimMode("KV", THXA_SIM_MODE_1) == 0)
 	{
 		//loc_D5E8
-		iErrorCode = OOXA_find_method(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x26, 0x228C7DB5, &pKVXT_isim_model_iVSA_fallback_shapes);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x26, 0x228C7DB5, (void**)&pKVXT_isim_model_iVSA_fallback_shapes);
 	}
 	else
 	{
@@ -6858,7 +6737,7 @@ int KVXT_model_iVSA_fallback_shapes(WPxCHUCK_chuck_id_enum chuck_id,
 	req_msg_data->chuck_id = chuck_id;
 	memcpy(&req_msg_data->level_results_TIS1, level_results_TIS1_p, 0x388);
 	memcpy(&req_msg_data->level_results_TIS2, level_results_TIS2_p, 0x388);
-	iErrorCode = OOXA_send_receive(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x26, 0x228C7DB5, req_msg_data,
+	iErrorCode = OOXA_send_receive((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x26, 0x228C7DB5, req_msg_data,
 		0x718, &rep_msg_data, &act_len, 0x41, 0x96);
 	if (iErrorCode != 0)
 	{
@@ -6952,7 +6831,7 @@ int KVXT_reset_chuck_spot_detection(WPxCHUCK_chuck_id_enum chuck_id)
 	if (THXAcheckSimMode("KV", THXA_SIM_MODE_1) == 0)
 	{
 		//loc_11078
-		iErrorCode = OOXA_find_method(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x37, 0x5A2A0D38, &pKVXT_isim_reset_chuck_spot_detection);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x37, 0x5A2A0D38, (void**)&pKVXT_isim_reset_chuck_spot_detection);
 	}
 	else
 	{
@@ -7012,7 +6891,7 @@ int KVXT_reset_chuck_spot_detection(WPxCHUCK_chuck_id_enum chuck_id)
 		return iErrorCode;
 	}
 	*req_msg_data = chuck_id;
-	iErrorCode = OOXA_send_receive(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x37, 0x5A2A0D38, 
+	iErrorCode = OOXA_send_receive((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x37, 0x5A2A0D38,
 		req_msg_data, 4, &rep_msg_data, &act_len, 0x41, 0x96);
 	if (iErrorCode != 0)
 	{
@@ -7055,14 +6934,14 @@ int KVXT_reset_chuck_spot_detection(WPxCHUCK_chuck_id_enum chuck_id)
 }
 
 // 函数名：KVXT_retrieve_LS_drift_SOSI
-int KVXT_retrieve_LS_drift_SOSI(WPxCHUCK_chuck_id_enum chuck_id, 
+int KVXT_retrieve_LS_drift_SOSI(WPxCHUCK_chuck_id_enum chuck_id,
 	double *Ry_drift)
 {
 	//WPxCHUCK_chuck_id_enum chuck_id = i0; //arg_44
 	//double * Ry_drift = i1; //arg_48
 	WPxCHUCK_chuck_id_enum * req_msg_data = NULL;  //var_4
 	int(*pKVXT_isim_retrieve_LS_drift_SOSI)(KVXT_local_OOXA_local_KVXT_singleton_object * local_OOXA_local_KVXT_singleton_object,
-		WPxCHUCK_chuck_id_enum chuck_id, 
+		WPxCHUCK_chuck_id_enum chuck_id,
 		double * Ry_drift) = NULL;  //var_8
 	int iErrorCode = 0;   //var_C
 	double * rep_msg_data = NULL; // var_10
@@ -7100,7 +6979,7 @@ int KVXT_retrieve_LS_drift_SOSI(WPxCHUCK_chuck_id_enum chuck_id,
 
 	if (THXAcheckSimMode("KV", THXA_SIM_MODE_1) == 0)
 	{
-		iErrorCode = OOXA_find_method(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x22, 0x20299B9F, &pKVXT_isim_retrieve_LS_drift_SOSI);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x22, 0x20299B9F, (void**)&pKVXT_isim_retrieve_LS_drift_SOSI);
 	}
 	else
 	{
@@ -7169,7 +7048,7 @@ int KVXT_retrieve_LS_drift_SOSI(WPxCHUCK_chuck_id_enum chuck_id,
 	}
 
 	*req_msg_data = chuck_id;
-	iErrorCode = OOXA_send_receive(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x22, 0x20299B9F, 
+	iErrorCode = OOXA_send_receive((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x22, 0x20299B9F,
 		req_msg_data, 4, &rep_msg_data, &act_len, 0x41, 0x96);
 	if (iErrorCode != 0)
 	{
@@ -7217,8 +7096,7 @@ int KVXT_retrieve_LS_drift_SOSI(WPxCHUCK_chuck_id_enum chuck_id,
 	return iErrorCode;
 }
 
-// 函数名：KVXT_retrieve_LS_drift_SOSI
-// 函数名：
+// 函数名：KVXT_retrieve_XVSA_scan_data
 int KVXT_retrieve_XVSA_scan_data(WPxCHUCK_chuck_id_enum chuck_id,
 	MEXAxVSA_XVSA_scan_data *tis1_scan_data,
 	MEXAxVSA_XVSA_scan_data *tis2_scan_data,
@@ -7227,10 +7105,10 @@ int KVXT_retrieve_XVSA_scan_data(WPxCHUCK_chuck_id_enum chuck_id,
 {
 	WPxCHUCK_chuck_id_enum * req_msg_data = NULL; //var_4
 	int(*pKVXT_isim_retrieve_XVSA_scan_data)(KVXT_local_OOXA_local_KVXT_singleton_object * local_OOXA_local_KVXT_singleton_object,
-		WPxCHUCK_chuck_id_enum chuck_id, 
-		MEXAxVSA_XVSA_scan_data *tis1_scan_data, 
+		WPxCHUCK_chuck_id_enum chuck_id,
+		MEXAxVSA_XVSA_scan_data *tis1_scan_data,
 		MEXAxVSA_XVSA_scan_data *tis2_scan_data,
-		KVXA_XVSA_chuck_model_results *xvsa_results, 
+		KVXA_XVSA_chuck_model_results *xvsa_results,
 		bool *xvsa_results_valid) = NULL; //var_8
 	int iErrorCode = 0; //var_C
 	libKVXT_unk_15 * rep_msg_data = NULL; //var_10
@@ -7301,7 +7179,7 @@ int KVXT_retrieve_XVSA_scan_data(WPxCHUCK_chuck_id_enum chuck_id,
 	if (THXAcheckSimMode("KV", THXA_SIM_MODE_1) == 0)
 	{
 		//loc_AE54
-		iErrorCode = OOXA_find_method(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x1C, 0x2A1FB8F5, &pKVXT_isim_retrieve_XVSA_scan_data);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x1C, 0x2A1FB8F5, (void**)&pKVXT_isim_retrieve_XVSA_scan_data);
 	}
 	else
 	{
@@ -7419,7 +7297,7 @@ int KVXT_retrieve_XVSA_scan_data(WPxCHUCK_chuck_id_enum chuck_id,
 	}
 
 	*req_msg_data = chuck_id;
-	iErrorCode = OOXA_send_receive(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x1C, 0x2A1FB8F5, 
+	iErrorCode = OOXA_send_receive((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x1C, 0x2A1FB8F5,
 		req_msg_data, 4, &rep_msg_data, &act_len, 0x41, 0x96);
 	if (iErrorCode != 0)
 	{
@@ -7527,7 +7405,7 @@ int KVXT_set_chuck_id(WPxCHUCK_chuck_id_enum  chuck_id)
 	if (THXAcheckSimMode("KV", THXA_SIM_MODE_1) == 0)
 	{
 		//loc_7F9C
-		iErrorCode = OOXA_find_method(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0xE, 0x432AB4E9, &pKVXT_isim_set_chuck_id);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0xE, 0x432AB4E9, (void**)&pKVXT_isim_set_chuck_id);
 	}
 	else
 	{
@@ -7582,7 +7460,7 @@ int KVXT_set_chuck_id(WPxCHUCK_chuck_id_enum  chuck_id)
 	}
 
 	*req_msg_data = chuck_id;
-	iErrorCode = OOXA_send_receive(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0xE, 0x432AB4E9, req_msg_data, 4, &rep_msg_data, &act_len, 0x41, 0x96);
+	iErrorCode = OOXA_send_receive((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0xE, 0x432AB4E9, req_msg_data, 4, &rep_msg_data, &act_len, 0x41, 0x96);
 	if (iErrorCode != 0)
 	{
 		// loc_80A8 o5 = iErrorCode
@@ -7649,7 +7527,7 @@ int KVXT_set_comp_sim_mode(bool comp_sim_mode)
 	if (THXAcheckSimMode("KV", THXA_SIM_MODE_1) == 0)
 	{
 		//loc_7040
-		iErrorCode = OOXA_find_method(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0xA, 0x2BBEC942, &pKVXT_isim_set_comp_sim_mode);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0xA, 0x2BBEC942, (void**)&pKVXT_isim_set_comp_sim_mode);
 	}
 	else
 	{
@@ -7706,7 +7584,7 @@ int KVXT_set_comp_sim_mode(bool comp_sim_mode)
 	}
 
 	*req_msg_data = comp_sim_mode;
-	iErrorCode = OOXA_send_receive(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0xA, 0x2BBEC942, 
+	iErrorCode = OOXA_send_receive((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0xA, 0x2BBEC942,
 		req_msg_data, 4, &rep_msg_data, &act_len, 0x41, 0x96);
 	if (iErrorCode != 0)
 	{
@@ -7791,7 +7669,7 @@ void KVXT_set_context(MEXAxGL_context_list * context)
 	if (THXAcheckSimMode("KV", THXA_SIM_MODE_1) == 0)
 	{
 		//loc_11A54
-		iErrorCode = OOXA_find_method(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x3A, 0x42D25BAA, &pKVXT_isim_set_context);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x3A, 0x42D25BAA, (void**)&pKVXT_isim_set_context);
 	}
 	else
 	{
@@ -7869,7 +7747,7 @@ int KVXT_set_diagnostics(MEXAxGL_state *state)
 	if (THXAcheckSimMode("KV", THXA_SIM_MODE_1) == 0)
 	{
 		//loc_11408
-		iErrorCode = OOXA_find_method(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x38, 0x3EE9BD34, &pKVXT_isim_set_diagnostics);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x38, 0x3EE9BD34, (void**)&pKVXT_isim_set_diagnostics);
 	}
 	else
 	{
@@ -7926,7 +7804,7 @@ int KVXT_set_diagnostics(MEXAxGL_state *state)
 	}
 
 	memcpy(req_msg_data, state, 0x70);
-	iErrorCode = OOXA_send_receive(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x38, 0x3EE9BD34, req_msg_data, 0x70, &rep_msg_data, &act_len, 0x41, 0x96);
+	iErrorCode = OOXA_send_receive((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x38, 0x3EE9BD34, req_msg_data, 0x70, &rep_msg_data, &act_len, 0x41, 0x96);
 	if (iErrorCode != 0)
 	{
 		//loc_11518 iErrorCode = o5
@@ -8010,7 +7888,7 @@ int KVXT_set_GLC_capture_params(KVXA_capture_params *capture_params)
 	if (THXAcheckSimMode("KV", THXA_SIM_MODE_1) == 0)
 	{
 		//loc_F6A0
-		iErrorCode = OOXA_find_method(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x2F, 0x3B03C081, &pKVXT_isim_set_GLC_capture_params);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x2F, 0x3B03C081, (void**)&pKVXT_isim_set_GLC_capture_params);
 	}
 	else
 	{
@@ -8077,7 +7955,7 @@ int KVXT_set_GLC_capture_params(KVXA_capture_params *capture_params)
 	req_msg_data->capture_def.change_of_process = capture_params->capture_def.change_of_process;
 	req_msg_data->capture_def.on_process = capture_params->capture_def.on_process;
 
-	iErrorCode = OOXA_send_receive(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x2F, 0x3B03C081, req_msg_data, 0x38, &rep_msg_data, &act_len, 0x41, 0x96);
+	iErrorCode = OOXA_send_receive((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x2F, 0x3B03C081, req_msg_data, 0x38, &rep_msg_data, &act_len, 0x41, 0x96);
 	if (iErrorCode != 0)
 	{
 		//loc_F7DC iErrorCode = o5
@@ -8161,7 +8039,7 @@ int KVXT_set_global_wafer_wedge(zrxryvect *global_wafer_wedge)
 
 	if (THXAcheckSimMode("KV", THXA_SIM_MODE_1) == 0)
 	{
-		iErrorCode = OOXA_find_method(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x2B, 0x2DDD7AE3, &pKVXT_isim_set_global_wafer_wedge);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x2B, 0x2DDD7AE3, (void**)&pKVXT_isim_set_global_wafer_wedge);
 	}
 	else
 	{
@@ -8222,7 +8100,7 @@ int KVXT_set_global_wafer_wedge(zrxryvect *global_wafer_wedge)
 	req_msg_data->rx = global_wafer_wedge->rx;
 	req_msg_data->ry = global_wafer_wedge->ry;
 
-	iErrorCode = OOXA_send_receive(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x2B, 0x2DDD7AE3, req_msg_data, 0x18, &rep_msg_data, &act_len, 0x41, 0x96);
+	iErrorCode = OOXA_send_receive((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x2B, 0x2DDD7AE3, req_msg_data, 0x18, &rep_msg_data, &act_len, 0x41, 0x96);
 	if (iErrorCode != 0)
 	{
 		//loc_EA70 iErrorCode = o5
@@ -8288,7 +8166,7 @@ int KVXT_set_high_precision_SA_levelling(bool high_precision_levelling)
 
 	if (THXAcheckSimMode("KV", THXA_SIM_MODE_1) == 0)
 	{
-		iErrorCode = OOXA_find_method(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x18, 0x5EEA3956, &pKVXT_isim_set_high_precision_SA_levelling);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x18, 0x5EEA3956, (void**)&pKVXT_isim_set_high_precision_SA_levelling);
 	}
 	else
 	{
@@ -8346,7 +8224,7 @@ int KVXT_set_high_precision_SA_levelling(bool high_precision_levelling)
 	}
 
 	*req_msg_data = high_precision_levelling;
-	iErrorCode = OOXA_send_receive(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x18, 0x5EEA3956, req_msg_data, 4, &rep_msg_data, &act_len, 0x41, 0x96);
+	iErrorCode = OOXA_send_receive((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x18, 0x5EEA3956, req_msg_data, 4, &rep_msg_data, &act_len, 0x41, 0x96);
 	if (iErrorCode != 0)
 	{
 		//loc_A294 o5 = iErrorCode
@@ -8392,14 +8270,14 @@ int KVXT_set_high_precision_SA_levelling(bool high_precision_levelling)
 }
 
 // 函数名：KVXT_set_iVSA_fallback_shapes
-int KVXT_set_iVSA_fallback_shapes(WPxCHUCK_chuck_id_enum chuck_id, 
+int KVXT_set_iVSA_fallback_shapes(WPxCHUCK_chuck_id_enum chuck_id,
 	KVXT_iVSA_plate_fallback_shape *fallback_shape_TIS1_p,
 	KVXT_iVSA_plate_fallback_shape *fallback_shape_TIS2_p)
 {
 	libKVXT_unk_16 * req_msg_data = NULL;
 	int(*pKVXT_isim_set_iVSA_fallback_shapes)(KVXT_local_OOXA_local_KVXT_singleton_object * local_OOXA_local_KVXT_singleton_object,
-		WPxCHUCK_chuck_id_enum chuck_id, 
-		KVXT_iVSA_plate_fallback_shape *fallback_shape_TIS1_p, 
+		WPxCHUCK_chuck_id_enum chuck_id,
+		KVXT_iVSA_plate_fallback_shape *fallback_shape_TIS1_p,
 		KVXT_iVSA_plate_fallback_shape *fallback_shape_TIS2_p) = NULL;
 	int iErrorCode = 0;
 	char * rep_msg_data = NULL;
@@ -8437,7 +8315,7 @@ int KVXT_set_iVSA_fallback_shapes(WPxCHUCK_chuck_id_enum chuck_id,
 
 	if (THXAcheckSimMode("KV", THXA_SIM_MODE_1) == 0)
 	{
-		iErrorCode = OOXA_find_method(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x27, 0x26F16E08, &pKVXT_isim_set_iVSA_fallback_shapes);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x27, 0x26F16E08, (void**)&pKVXT_isim_set_iVSA_fallback_shapes);
 	}
 	else
 	{
@@ -8497,7 +8375,7 @@ int KVXT_set_iVSA_fallback_shapes(WPxCHUCK_chuck_id_enum chuck_id,
 	memcpy(&req_msg_data->fallback_shape_TIS1, fallback_shape_TIS1_p, 0x90);
 	memcpy(&req_msg_data->fallback_shape_TIS2, fallback_shape_TIS2_p, 0x90);
 
-	iErrorCode = OOXA_send_receive(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x27, 0x26F16E08, req_msg_data, 0x128, &rep_msg_data, &act_len, 0x41, 0x96);
+	iErrorCode = OOXA_send_receive((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x27, 0x26F16E08, req_msg_data, 0x128, &rep_msg_data, &act_len, 0x41, 0x96);
 	if (iErrorCode != 0)
 	{
 		//loc_DC28 iErrorCode = o5
@@ -8581,7 +8459,7 @@ int KVXT_set_al_athena_zrxry(zrxryvect *al_athena_zrxry)
 
 	if (THXAcheckSimMode("KV", THXA_SIM_MODE_1) == 0)
 	{
-		iErrorCode = OOXA_find_method(local_OOXA_local_KVXT_singleton_object, "KVXT:", 4, 0x5C6B205, &pKVXT_isim_set_al_athena_zrxry);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 4, 0x5C6B205, (void**)&pKVXT_isim_set_al_athena_zrxry);
 	}
 	else
 	{
@@ -8642,7 +8520,7 @@ int KVXT_set_al_athena_zrxry(zrxryvect *al_athena_zrxry)
 	req_msg_data->rx = al_athena_zrxry->rx;
 	req_msg_data->ry = al_athena_zrxry->ry;
 
-	iErrorCode = OOXA_send_receive(local_OOXA_local_KVXT_singleton_object, "KVXT:", 4, 0x5C6B2056, req_msg_data, 0x18, &rep_msg_data, &act_len, 0x41, 0x96);
+	iErrorCode = OOXA_send_receive((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 4, 0x5C6B2056, req_msg_data, 0x18, &rep_msg_data, &act_len, 0x41, 0x96);
 	if (iErrorCode != 0)
 	{
 		//loc_5D50 o5 = iErrorCode
@@ -8688,7 +8566,7 @@ int KVXT_set_al_athena_zrxry(zrxryvect *al_athena_zrxry)
 }
 
 // 函数名：KVXT_set_le_spot_id_SA
-int KVXT_set_le_spot_id_SA(const LEXAxSPOT_spot_selection_t spot_id)
+int KVXT_set_le_spot_id_SA(LEXAxSPOT_spot_selection_t spot_id)
 {
 	LEXAxSPOT_ag_spot_id_t *req_msg_data = NULL;
 	int(*pKVXT_isim_set_le_spot_id_SA)(KVXT_local_OOXA_local_KVXT_singleton_object *local_OOXA_local_KVXT_singleton_object,
@@ -8697,7 +8575,7 @@ int KVXT_set_le_spot_id_SA(const LEXAxSPOT_spot_selection_t spot_id)
 	char *rep_msg_data = NULL;
 	int act_len = 0;
 
-	THXAdataRequest("KV", 4, __FUNCTION__, 0, "%4D", 
+	THXAdataRequest("KV", 4, __FUNCTION__, 0, "%4D",
 		"spot_id", "LEXAxSPOT:spot_selection_t", &spot_id);
 	THXAtrace("KV", 2, __FUNCTION__, "> %s (%4D)", local_OOXA_local_KVXT_singleton_object->component,
 		"spot_id", "LEXAxSPOT:spot_selection_t", &spot_id);
@@ -8709,7 +8587,7 @@ int KVXT_set_le_spot_id_SA(const LEXAxSPOT_spot_selection_t spot_id)
 	// .text:000094D8
 	if (THXAcheckSimMode("KV", THXA_SIM_MODE_1) == 0)
 	{//loc_9508
-		iErrorCode = OOXA_find_method(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x14, 0x6738F029, &pKVXT_isim_set_le_spot_id_SA);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x14, 0x6738F029, (void**)&pKVXT_isim_set_le_spot_id_SA);
 	}
 	else
 	{
@@ -8718,7 +8596,7 @@ int KVXT_set_le_spot_id_SA(const LEXAxSPOT_spot_selection_t spot_id)
 	//loc_953C
 	if (iErrorCode != 0)
 	{//loc_96E8→loc_969C
-		THXAtrace("KV", 2, __FUNCTION__, "< %s ()=%R", 
+		THXAtrace("KV", 2, __FUNCTION__, "< %s ()=%R",
 			local_OOXA_local_KVXT_singleton_object->component, iErrorCode);
 		return iErrorCode;
 	}
@@ -8761,7 +8639,7 @@ int KVXT_set_le_spot_id_SA(const LEXAxSPOT_spot_selection_t spot_id)
 	}
 	// .text:00009570
 	*req_msg_data = spot_id;
-	iErrorCode = OOXA_send_receive(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x14, 0x6738F029,
+	iErrorCode = OOXA_send_receive((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x14, 0x6738F029,
 		req_msg_data, 4, &rep_msg_data, &act_len, 0x41, 0x96);
 	if (iErrorCode != 0)
 	{
@@ -8808,7 +8686,7 @@ int KVXT_set_le_spot_id_SA(const LEXAxSPOT_spot_selection_t spot_id)
 }
 
 // 函数名：KVXT_set_le_spot_id_WM
-int KVXT_set_le_spot_id_WM(const LEXAxSPOT_spot_selection_t spot_id)
+int KVXT_set_le_spot_id_WM(LEXAxSPOT_spot_selection_t spot_id)
 {
 	LEXAxSPOT_ag_spot_id_t *req_msg_data = NULL;
 	int(*pKVXT_isim_set_le_spot_id_WM)(KVXT_local_OOXA_local_KVXT_singleton_object *local_OOXA_local_KVXT_singleton_object,
@@ -8817,20 +8695,20 @@ int KVXT_set_le_spot_id_WM(const LEXAxSPOT_spot_selection_t spot_id)
 	char *rep_msg_data = NULL;
 	int act_len = 0;
 
-	THXAdataRequest("KV", 4, __FUNCTION__, 0, "%4D", 
+	THXAdataRequest("KV", 4, __FUNCTION__, 0, "%4D",
 		"spot_id", "LEXAxSPOT:spot_selection_t", &spot_id);
 	THXAtrace("KV", 2, __FUNCTION__, "> %s (%4D)", local_OOXA_local_KVXT_singleton_object->component,
 		"spot_id", "LEXAxSPOT:spot_selection_t", &spot_id);
 	if (iErrorCode != 0)
 	{//loc_10590
 		THXAtrace("KV", 2, __FUNCTION__, "< %s ()=%R",
-			local_OOXA_local_KVXT_singleton_object->component , iErrorCode);
+			local_OOXA_local_KVXT_singleton_object->component, iErrorCode);
 		return iErrorCode;
 	}
 	// .text:000103CC
 	if (THXAcheckSimMode("KV", THXA_SIM_MODE_1) == 0)
 	{//loc_103FC
-		OOXA_find_method(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x33, 0x6A422111, &pKVXT_isim_set_le_spot_id_WM);
+		OOXA_find_method((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x33, 0x6A422111, (void**)&pKVXT_isim_set_le_spot_id_WM);
 	}
 	else
 	{
@@ -8882,7 +8760,7 @@ int KVXT_set_le_spot_id_WM(const LEXAxSPOT_spot_selection_t spot_id)
 	}
 	// .text:00010464
 	*req_msg_data = spot_id;
-	iErrorCode = OOXA_send_receive(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x33, 0x6A422111, 
+	iErrorCode = OOXA_send_receive((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x33, 0x6A422111,
 		rep_msg_data, 4, &rep_msg_data, &act_len, 0x41, 0x96);
 	if (iErrorCode != 0)
 	{//loc_10508→loc_1050C
@@ -8926,8 +8804,8 @@ int KVXT_set_le_spot_id_WM(const LEXAxSPOT_spot_selection_t spot_id)
 }
 
 // 函数名：KVXT_set_le_spot_xyz
-int KVXT_set_le_spot_xyz(const LEXAxSPOT_spot_id_t spot_id,
-	const xyzvect *le_spot_xyz)
+int KVXT_set_le_spot_xyz(LEXAxSPOT_spot_id_t spot_id,
+	xyzvect *le_spot_xyz)
 {
 	KVXT_unk_10 *req_msg_data = NULL;
 	int(*pKVXT_isim_set_le_spot_xyz)(KVXT_local_OOXA_local_KVXT_singleton_object *local_OOXA_local_KVXT_singleton_object,
@@ -8940,7 +8818,7 @@ int KVXT_set_le_spot_xyz(const LEXAxSPOT_spot_id_t spot_id,
 
 	if (le_spot_xyz != NULL)
 	{//loc_53DC
-		THXAdataRequest("KV", 4, __FUNCTION__, 0, "%4D %24D", 
+		THXAdataRequest("KV", 4, __FUNCTION__, 0, "%4D %24D",
 			"spot_id", "LEXAxSPOT:spot_id_t", &spot_id, "le_spot_xyz", "xyzvect", le_spot_xyz);
 	}
 	else
@@ -8954,18 +8832,18 @@ int KVXT_set_le_spot_xyz(const LEXAxSPOT_spot_id_t spot_id,
 		}
 	}
 	//loc_5458
-	THXAtrace("KV", 2, __FUNCTION__, "> %s (%4D %24D)", local_OOXA_local_KVXT_singleton_object->component, 
+	THXAtrace("KV", 2, __FUNCTION__, "> %s (%4D %24D)", local_OOXA_local_KVXT_singleton_object->component,
 		"spot_id", "LEXAxSPOT:spot_id_t", &spot_id, "le_spot_xyz", "xyzvect", le_spot_xyz);
 	if (iErrorCode != 0)
 	{//loc_56CC
-		THXAtrace("KV", 2, __FUNCTION__, "< %s ()=%R", 
+		THXAtrace("KV", 2, __FUNCTION__, "< %s ()=%R",
 			local_OOXA_local_KVXT_singleton_object->component, iErrorCode);
 		return iErrorCode;
 	}
 	// .text:000054EC
 	if (THXAcheckSimMode("KV", THXA_SIM_MODE_1) == 0)
 	{//loc_551C
-		iErrorCode = OOXA_find_method(local_OOXA_local_KVXT_singleton_object, "KVXT:", 2, 0x67C278EE, &pKVXT_isim_set_le_spot_xyz);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 2, 0x67C278EE, (void**)&pKVXT_isim_set_le_spot_xyz);
 	}
 	else
 	{
@@ -9020,7 +8898,7 @@ int KVXT_set_le_spot_xyz(const LEXAxSPOT_spot_id_t spot_id,
 	req_msg_data->le_spot_xyz.x = le_spot_xyz->x;
 	req_msg_data->le_spot_xyz.y = le_spot_xyz->y;
 	req_msg_data->le_spot_xyz.z = le_spot_xyz->z;
-	iErrorCode = OOXA_send_receive(local_OOXA_local_KVXT_singleton_object, "KVXT:", 2, 0x67C278EE, 
+	iErrorCode = OOXA_send_receive((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 2, 0x67C278EE,
 		req_msg_data, 0x20, &rep_msg_data, &act_len, 0x41, 0x96);
 	if (iErrorCode == 0)
 	{//loc_5644
@@ -9064,7 +8942,7 @@ int KVXT_set_le_spot_xyz(const LEXAxSPOT_spot_id_t spot_id,
 }
 
 // 函数名：KVXT_set_lot_GLC_params
-int KVXT_set_lot_GLC_params(const KVXAxLOTxPAR_GLC_lot_data *glc_lot_data)
+int KVXT_set_lot_GLC_params(KVXAxLOTxPAR_GLC_lot_data *glc_lot_data)
 {
 	char *req_msg_data = NULL;
 	char *buffer = NULL; // buffer是req_msg_data结构体类型的指针
@@ -9077,7 +8955,7 @@ int KVXT_set_lot_GLC_params(const KVXAxLOTxPAR_GLC_lot_data *glc_lot_data)
 	char *psErrorText = NULL;
 	if (glc_lot_data != NULL)
 	{//loc_EED8
-		THXAdataRequest("KV", 4, __FUNCTION__, 0, "%D", 
+		THXAdataRequest("KV", 4, __FUNCTION__, 0, "%D",
 			"glc_lot_data", "KVXAxLOTxPAR:GLC_lot_data", glc_lot_data);
 	}
 	else
@@ -9091,18 +8969,18 @@ int KVXT_set_lot_GLC_params(const KVXAxLOTxPAR_GLC_lot_data *glc_lot_data)
 		}
 	}
 	//loc_EF2C
-	THXAtrace("KV", 2, __FUNCTION__, "> %s (%D)", local_OOXA_local_KVXT_singleton_object->component, 
+	THXAtrace("KV", 2, __FUNCTION__, "> %s (%D)", local_OOXA_local_KVXT_singleton_object->component,
 		"glc_lot_data", "KVXAxLOTxPAR:GLC_lot_data", glc_lot_data);
 	if (iErrorCode != 0)
 	{//loc_F1A8
-		THXAtrace("KV", 2, __FUNCTION__, "< %s ()=%R", 
+		THXAtrace("KV", 2, __FUNCTION__, "< %s ()=%R",
 			local_OOXA_local_KVXT_singleton_object->component, iErrorCode);
 		return iErrorCode;
 	}
 	// .text:0000EF98
 	if (THXAcheckSimMode("KV", THXA_SIM_MODE_1) == 0)
 	{//loc_EFC8
-		iErrorCode = OOXA_find_method(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x2D, 0x5A545BF1, &pKVXT_isim_set_lot_GLC_params);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x2D, 0x5A545BF1, (void**)&pKVXT_isim_set_lot_GLC_params);
 	}
 	else
 	{
@@ -9190,7 +9068,7 @@ int KVXT_set_lot_GLC_params(const KVXAxLOTxPAR_GLC_lot_data *glc_lot_data)
 		}
 	}
 	// .text:0000F088
-	iErrorCode = OOXA_send_receive(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x2D, 0x5A545BF1, 
+	iErrorCode = OOXA_send_receive((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x2D, 0x5A545BF1,
 		req_msg_data, packet_size, &rep_msg_data, &act_len, 0x41, 0x96);
 	if (iErrorCode != 0)
 	{//loc_F120
@@ -9234,7 +9112,7 @@ int KVXT_set_lot_GLC_params(const KVXAxLOTxPAR_GLC_lot_data *glc_lot_data)
 }
 
 // 函数名：KVXT_set_lot_WM_params
-int KVXT_set_lot_WM_params(const KVXAxLOTxPAR_WM_lot_data_t *wm_lot_data)
+int KVXT_set_lot_WM_params(KVXAxLOTxPAR_WM_lot_data_t *wm_lot_data)
 {
 	char *req_msg_data = NULL; // 体现不出结构体，暂用char *代替
 	char *buffer = NULL; // buffer是req_msg_data结构体类型的指针
@@ -9261,7 +9139,7 @@ int KVXT_set_lot_WM_params(const KVXAxLOTxPAR_WM_lot_data_t *wm_lot_data)
 	// .text:000109A4
 	if (THXAcheckSimMode("KV", THXA_SIM_MODE_1) == 0)
 	{//loc_109D4
-		iErrorCode = OOXA_find_method(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x35, 0x681376D, &pKVXT_isim_set_lot_WM_params);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x35, 0x681376D, (void**)&pKVXT_isim_set_lot_WM_params);
 	}
 	else
 	{
@@ -9276,18 +9154,18 @@ int KVXT_set_lot_WM_params(const KVXAxLOTxPAR_WM_lot_data_t *wm_lot_data)
 	// .text:00010A18
 	if (pKVXT_isim_set_lot_WM_params != 0)
 	{//loc_10B14→loc_10B2C
-		iErrorCode = pKVXT_isim_set_lot_WM_params(local_OOXA_local_KVXT_singleton_object->component, wm_lot_data);
+		iErrorCode = pKVXT_isim_set_lot_WM_params(local_OOXA_local_KVXT_singleton_object, wm_lot_data);
 		//loc_10B30
 		if (iErrorCode != 0)
 		{//loc_10BB4
-			THXAtrace("KV", 2, __FUNCTION__, "< %s ()=%R", 
+			THXAtrace("KV", 2, __FUNCTION__, "< %s ()=%R",
 				local_OOXA_local_KVXT_singleton_object->component, iErrorCode);
 			return iErrorCode;
 		}
 		else
 		{//loc_10B3C
 			THXAdataRequest("KV", 5, __FUNCTION__, 0, "%d", &iErrorCode);
-			THXAtrace("KV", 2, __FUNCTION__, "< %s ()=%R", 
+			THXAtrace("KV", 2, __FUNCTION__, "< %s ()=%R",
 				local_OOXA_local_KVXT_singleton_object->component, iErrorCode);
 			return iErrorCode;
 		}
@@ -9351,7 +9229,7 @@ int KVXT_set_lot_WM_params(const KVXAxLOTxPAR_WM_lot_data_t *wm_lot_data)
 		}
 	}
 	// .text:00010A94
-	iErrorCode = OOXA_send_receive(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x35, 0x681376D,
+	iErrorCode = OOXA_send_receive((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x35, 0x681376D,
 		req_msg_data, packed_size, &rep_msg_data, &act_len, 0x41, 0x96);
 	if (iErrorCode != 0)
 	{//loc_10B2C
@@ -9397,10 +9275,10 @@ int KVXT_set_lot_WM_params(const KVXAxLOTxPAR_WM_lot_data_t *wm_lot_data)
 }
 
 // 函数名：KVXT_set_plate_drift_refs
-int KVXT_set_plate_drift_refs(const WPxCHUCK_chuck_id_enum stage_id,
-	const MEXAxWAFxPLATE_wafer_level_plate plate_id,
-	const KVXT_TIS_drift_ref_struct *drift_refs,
-	const bool validity)
+int KVXT_set_plate_drift_refs(WPxCHUCK_chuck_id_enum stage_id,
+	MEXAxWAFxPLATE_wafer_level_plate plate_id,
+	KVXT_TIS_drift_ref_struct *drift_refs,
+	bool validity)
 {
 	KVXT_unk_2 *req_msg_data = NULL;
 	int(*pKVXT_isim_set_plate_drift_refs)(KVXT_local_OOXA_local_KVXT_singleton_object *local_OOXA_local_KVXT_singleton_object,
@@ -9414,7 +9292,7 @@ int KVXT_set_plate_drift_refs(const WPxCHUCK_chuck_id_enum stage_id,
 	char *psErrorText = NULL;
 	if (drift_refs != NULL)
 	{//loc_7A74
-		THXAdataRequest("KV", 4, __FUNCTION__, 0, "%4D %4D %80D %4D", 
+		THXAdataRequest("KV", 4, __FUNCTION__, 0, "%4D %4D %80D %4D",
 			"stage_id", "WPxCHUCK:chuck_id_enum", &stage_id, "plate_id", "MEXAxWAFxPLATE:wafer_level_plate", &plate_id,
 			"drift_refs", "KVXT:TIS_drift_ref_struct", drift_refs, "validity", "bool", &validity);
 	}
@@ -9431,19 +9309,19 @@ int KVXT_set_plate_drift_refs(const WPxCHUCK_chuck_id_enum stage_id,
 		}
 	}
 	// loc_7B40
-	THXAtrace("KV", 2, __FUNCTION__, "> %s (%4D %4D %80D %4D)", local_OOXA_local_KVXT_singleton_object->component, 
+	THXAtrace("KV", 2, __FUNCTION__, "> %s (%4D %4D %80D %4D)", local_OOXA_local_KVXT_singleton_object->component,
 		"stage_id", "WPxCHUCK:chuck_id_enum", &stage_id, "plate_id", "MEXAxWAFxPLATE:wafer_level_plate", &plate_id,
 		"drift_refs", "KVXT:TIS_drift_ref_struct", drift_refs, "validity", "bool", &validity);
 	if (iErrorCode != 0)
 	{//loc_7E18
-		THXAtrace("KV", 2, __FUNCTION__, "< %s ()=%R", 
+		THXAtrace("KV", 2, __FUNCTION__, "< %s ()=%R",
 			local_OOXA_local_KVXT_singleton_object->component, iErrorCode);
 		return iErrorCode;
 	}
 	// .text:00007C24
 	if (THXAcheckSimMode("KV", THXA_SIM_MODE_1) == 0)
 	{//loc_7C54
-		iErrorCode = OOXA_find_method(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0xD, 0x8728D14, &pKVXT_isim_set_plate_drift_refs);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0xD, 0x8728D14, (void**)&pKVXT_isim_set_plate_drift_refs);
 	}
 	else
 	{
@@ -9470,7 +9348,7 @@ int KVXT_set_plate_drift_refs(const WPxCHUCK_chuck_id_enum stage_id,
 		else
 		{// loc_7DA0
 			THXAdataRequest("KV", 5, __FUNCTION__, 0, "%d", &iErrorCode);
-			THXAtrace("KV", 2, __FUNCTION__, "< %s ()=%R", 
+			THXAtrace("KV", 2, __FUNCTION__, "< %s ()=%R",
 				local_OOXA_local_KVXT_singleton_object->component, iErrorCode);
 			return iErrorCode;
 		}
@@ -9497,7 +9375,7 @@ int KVXT_set_plate_drift_refs(const WPxCHUCK_chuck_id_enum stage_id,
 	req_msg_data->plate_id = plate_id;
 	memcpy(&req_msg_data->drift_refs, drift_refs, 0x50);
 	req_msg_data->validity = validity;
-	iErrorCode = OOXA_send_receive(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0xD, 0x8728D14, 
+	iErrorCode = OOXA_send_receive((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0xD, 0x8728D14,
 		req_msg_data, 0x5C, &rep_msg_data, &act_len, 0x41, 0x96);
 	if (iErrorCode != 0)
 	{//loc_7D90→loc_7D94
@@ -9542,9 +9420,9 @@ int KVXT_set_plate_drift_refs(const WPxCHUCK_chuck_id_enum stage_id,
 }
 
 // 函数名：KVXT_set_plate_level_ref_xyz
-int KVXT_set_plate_level_ref_xyz(const WPxCHUCK_chuck_id_enum stage_id,
-	const MEXAxWAFxPLATE_wafer_level_plate plate_id,
-	const xyzvect *plate_level_ref_xyz)
+int KVXT_set_plate_level_ref_xyz(WPxCHUCK_chuck_id_enum stage_id,
+	MEXAxWAFxPLATE_wafer_level_plate plate_id,
+	xyzvect *plate_level_ref_xyz)
 {
 	KVXT_unk_9 *req_msg_data = NULL;
 	int(*pKVXT_isim_set_plate_level_ref_xyz)(KVXT_local_OOXA_local_KVXT_singleton_object *local_OOXA_local_KVXT_singleton_object,
@@ -9557,7 +9435,7 @@ int KVXT_set_plate_level_ref_xyz(const WPxCHUCK_chuck_id_enum stage_id,
 	char *psErrorText = NULL;
 	if (plate_level_ref_xyz != NULL)
 	{//loc_4BA0
-		THXAdataRequest("KV", 4, __FUNCTION__, 0, "%4D %4D %24D", 
+		THXAdataRequest("KV", 4, __FUNCTION__, 0, "%4D %4D %24D",
 			"stage_id", "WPxCHUCK:chuck_id_enum", stage_id, "plate_id", "MEXAxWAFxPLATE:wafer_level_plate", plate_id,
 			"plate_level_ref_xyz", "xyzvect", plate_level_ref_xyz);
 	}
@@ -9575,22 +9453,22 @@ int KVXT_set_plate_level_ref_xyz(const WPxCHUCK_chuck_id_enum stage_id,
 	}
 	// loc_4C44
 	THXAtrace("KV", 2, __FUNCTION__, "> %s (%4D %4D %24D)", local_OOXA_local_KVXT_singleton_object->component,
-		"stage_id", "WPxCHUCK:chuck_id_enum", stage_id, "plate_id", "MEXAxWAFxPLATE:wafer_level_plate", plate_id, 
+		"stage_id", "WPxCHUCK:chuck_id_enum", stage_id, "plate_id", "MEXAxWAFxPLATE:wafer_level_plate", plate_id,
 		"plate_level_ref_xyz", "xyzvect", plate_level_ref_xyz);
 	if (iErrorCode != 0)
 	{//loc_4EF0
-		THXAtrace("KV", 2, __FUNCTION__, "< %s ()=%R", 
+		THXAtrace("KV", 2, __FUNCTION__, "< %s ()=%R",
 			local_OOXA_local_KVXT_singleton_object->component, iErrorCode);
 		return iErrorCode;
 	}
 	// .text:00004D00 
 	if (THXAcheckSimMode("KV", THXA_SIM_MODE_1) == 0)
 	{//loc_4D30
-		iErrorCode = OOXA_find_method(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0, 0x18DEEF8C, &pKVXT_isim_set_plate_level_ref_xyz);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0, 0x18DEEF8C, (void**)&pKVXT_isim_set_plate_level_ref_xyz);
 	}
 	else
 	{
-		pKVXT_isim_set_plate_level_ref_xyz = KVXT_isim_set_XVSA_scan_refs;
+		pKVXT_isim_set_plate_level_ref_xyz = KVXT_isim_set_plate_level_ref_xyz;
 	}
 	//loc_4D64
 	if (iErrorCode != 0)
@@ -9607,20 +9485,20 @@ int KVXT_set_plate_level_ref_xyz(const WPxCHUCK_chuck_id_enum stage_id,
 		//loc_4E6C
 		if (iErrorCode != 0)
 		{//loc_4EF0
-			THXAtrace("KV", 2, __FUNCTION__, "< %s ()=%R", 
+			THXAtrace("KV", 2, __FUNCTION__, "< %s ()=%R",
 				local_OOXA_local_KVXT_singleton_object->component, iErrorCode);
 			return iErrorCode;
 		}
 		else
 		{//loc_4E78
 			THXAdataRequest("KV", 5, __FUNCTION__, 0, "%d", &iErrorCode);
-			THXAtrace("KV", 2, __FUNCTION__, "< %s ()=%R", 
+			THXAtrace("KV", 2, __FUNCTION__, "< %s ()=%R",
 				local_OOXA_local_KVXT_singleton_object->component, iErrorCode);
 			return iErrorCode;
 		}
 	}
 	// .text:00004D80
-	iErrorCode = OOXA_allocate_buffer(0x20, req_msg_data);
+	iErrorCode = OOXA_allocate_buffer(0x20, (void**)&req_msg_data);
 	if (iErrorCode != 0)
 	{//loc_4E68→loc_4E6C
 		if (iErrorCode != 0)
@@ -9643,7 +9521,7 @@ int KVXT_set_plate_level_ref_xyz(const WPxCHUCK_chuck_id_enum stage_id,
 	req_msg_data->plate_level_ref_xyz.x = plate_level_ref_xyz->x;
 	req_msg_data->plate_level_ref_xyz.y = plate_level_ref_xyz->y;
 	req_msg_data->plate_level_ref_xyz.z = plate_level_ref_xyz->z;
-	iErrorCode = OOXA_send_receive(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0, 0x18DEEF8C, 
+	iErrorCode = OOXA_send_receive((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0, 0x18DEEF8C,
 		rep_msg_data, 0x20, &rep_msg_data, &act_len, 0x41, 0x96);
 	if (iErrorCode != 0)
 	{//loc_4E68
@@ -9688,9 +9566,9 @@ int KVXT_set_plate_level_ref_xyz(const WPxCHUCK_chuck_id_enum stage_id,
 }
 
 // 函数名：KVXT_set_plate_wedge
-int KVXT_set_plate_wedge(const WPxCHUCK_chuck_id_enum stage_id,
-	const MEXAxWAFxPLATE_wafer_level_plate plate_id,
-	const zrxryvect *plate_wedge)
+int KVXT_set_plate_wedge(WPxCHUCK_chuck_id_enum stage_id,
+	MEXAxWAFxPLATE_wafer_level_plate plate_id,
+	zrxryvect *plate_wedge)
 {
 	KVXT_unk_8 *req_msg_data = NULL;
 	int(*pKVXT_isim_set_plate_wedge)(KVXT_local_OOXA_local_KVXT_singleton_object *local_OOXA_local_KVXT_singleton_object,
@@ -9703,8 +9581,8 @@ int KVXT_set_plate_wedge(const WPxCHUCK_chuck_id_enum stage_id,
 	char *psErrorText = NULL;
 	if (plate_wedge != NULL)
 	{//loc_61B4
-		THXAdataRequest("KV", 4, __FUNCTION__, 0, "%4D %4D %24D", 
-			"stage_id", "WPxCHUCK:chuck_id_enum", &stage_id, "plate_id", "MEXAxWAFxPLATE:wafer_level_plate", &plate_id, 
+		THXAdataRequest("KV", 4, __FUNCTION__, 0, "%4D %4D %24D",
+			"stage_id", "WPxCHUCK:chuck_id_enum", &stage_id, "plate_id", "MEXAxWAFxPLATE:wafer_level_plate", &plate_id,
 			"plate_wedge", "zrxryvect", plate_wedge);
 	}
 	else
@@ -9721,20 +9599,20 @@ int KVXT_set_plate_wedge(const WPxCHUCK_chuck_id_enum stage_id,
 	}
 	// loc_6258
 	//loc_6258
-	THXAtrace("KV", 2, __FUNCTION__, "> %s (%4D %4D %24D)", 
-		local_OOXA_local_KVXT_singleton_object->component, 
+	THXAtrace("KV", 2, __FUNCTION__, "> %s (%4D %4D %24D)",
+		local_OOXA_local_KVXT_singleton_object->component,
 		"stage_id", "WPxCHUCK:chuck_id_enum", stage_id, "plate_id", "MEXAxWAFxPLATE:wafer_level_plate", plate_id,
 		"plate_wedge", "zrxryvect", plate_wedge);
 	if (iErrorCode != 0)
 	{//loc_6504
-		THXAtrace("KV", 2, __FUNCTION__, "< %s ()=%R", 
+		THXAtrace("KV", 2, __FUNCTION__, "< %s ()=%R",
 			local_OOXA_local_KVXT_singleton_object->component, iErrorCode);
 		return iErrorCode;
 	}
 	// .text:00006314
 	if (THXAcheckSimMode("KV", THXA_SIM_MODE_1) == 0)
 	{//loc_6344
-		iErrorCode = OOXA_find_method(local_OOXA_local_KVXT_singleton_object, "KVXT:", 6, 0x4688A126, &pKVXT_isim_set_plate_wedge);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 6, 0x4688A126, (void**)&pKVXT_isim_set_plate_wedge);
 	}
 	else
 	{
@@ -9743,7 +9621,7 @@ int KVXT_set_plate_wedge(const WPxCHUCK_chuck_id_enum stage_id,
 	//loc_6378
 	if (iErrorCode != 0)
 	{//loc_6550→loc_6504
-		THXAtrace("KV", 2, __FUNCTION__, "< %s ()=%R", 
+		THXAtrace("KV", 2, __FUNCTION__, "< %s ()=%R",
 			local_OOXA_local_KVXT_singleton_object->component, iErrorCode);
 		return iErrorCode;
 	}
@@ -9754,14 +9632,14 @@ int KVXT_set_plate_wedge(const WPxCHUCK_chuck_id_enum stage_id,
 		//loc_647C→loc_6480
 		if (iErrorCode != 0)
 		{//loc_6504
-			THXAtrace("KV", 2, __FUNCTION__, "< %s ()=%R", 
+			THXAtrace("KV", 2, __FUNCTION__, "< %s ()=%R",
 				local_OOXA_local_KVXT_singleton_object->component, iErrorCode);
 			return iErrorCode;
 		}
 		else
 		{//loc_648C
 			THXAdataRequest("KV", 5, __FUNCTION__, 0, "%d", &iErrorCode);
-			THXAtrace("KV", 2, __FUNCTION__, "< %s ()=%R", 
+			THXAtrace("KV", 2, __FUNCTION__, "< %s ()=%R",
 				local_OOXA_local_KVXT_singleton_object->component, iErrorCode);
 			return iErrorCode;
 		}
@@ -9772,14 +9650,14 @@ int KVXT_set_plate_wedge(const WPxCHUCK_chuck_id_enum stage_id,
 	{//loc_647C→loc_6480
 		if (iErrorCode != 0)
 		{//loc_6504
-			THXAtrace("KV", 2, __FUNCTION__, "< %s ()=%R", 
+			THXAtrace("KV", 2, __FUNCTION__, "< %s ()=%R",
 				local_OOXA_local_KVXT_singleton_object->component, iErrorCode);
 			return iErrorCode;
 		}
 		else
 		{//loc_648C
 			THXAdataRequest("KV", 5, __FUNCTION__, 0, "%d", &iErrorCode);
-			THXAtrace("KV", 2, __FUNCTION__, "< %s ()=%R", 
+			THXAtrace("KV", 2, __FUNCTION__, "< %s ()=%R",
 				local_OOXA_local_KVXT_singleton_object->component, iErrorCode);
 			return iErrorCode;
 		}
@@ -9790,7 +9668,7 @@ int KVXT_set_plate_wedge(const WPxCHUCK_chuck_id_enum stage_id,
 	req_msg_data->plate_wedge.z = plate_wedge->z;
 	req_msg_data->plate_wedge.rx = plate_wedge->rx;
 	req_msg_data->plate_wedge.ry = plate_wedge->ry;
-	iErrorCode = OOXA_send_receive(local_OOXA_local_KVXT_singleton_object, "KVXT:", 6, 0x4688A126, 
+	iErrorCode = OOXA_send_receive((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 6, 0x4688A126,
 		req_msg_data, 0x20, &rep_msg_data, &act_len, 0x41, 0x96);
 	if (iErrorCode != 0)
 	{//loc_647C→loc_6480
@@ -9812,7 +9690,7 @@ int KVXT_set_plate_wedge(const WPxCHUCK_chuck_id_enum stage_id,
 	if (rep_msg_data = NULL)
 	{//loc_648C
 		THXAdataRequest("KV", 5, __FUNCTION__, 0, "%d", &iErrorCode);
-		THXAtrace("KV", 2, __FUNCTION__, "< %s ()=%R", 
+		THXAtrace("KV", 2, __FUNCTION__, "< %s ()=%R",
 			local_OOXA_local_KVXT_singleton_object->component, iErrorCode);
 		return iErrorCode;
 	}
@@ -9835,7 +9713,7 @@ int KVXT_set_plate_wedge(const WPxCHUCK_chuck_id_enum stage_id,
 }
 
 // 函数名：KVXT_set_SA_capture_params
-int KVXT_set_SA_capture_params(const KVXA_capture_params *capture_params)
+int KVXT_set_SA_capture_params(KVXA_capture_params *capture_params)
 {
 	KVXA_capture_params *req_msg_data = NULL;
 	int(*pKVXT_isim_set_SA_capture_params)(KVXT_local_OOXA_local_KVXT_singleton_object *local_OOXA_local_KVXT_singleton_object,
@@ -9846,7 +9724,7 @@ int KVXT_set_SA_capture_params(const KVXA_capture_params *capture_params)
 	char *psErrorText = NULL;
 	if (capture_params != NULL)
 	{//loc_9A64
-		THXAdataRequest("KV", 4, __FUNCTION__, 0, "%56D", 
+		THXAdataRequest("KV", 4, __FUNCTION__, 0, "%56D",
 			"capture_params", "KVXA:capture_params", capture_params);
 	}
 	else
@@ -9861,18 +9739,18 @@ int KVXT_set_SA_capture_params(const KVXA_capture_params *capture_params)
 		}
 	}
 	//loc_9AB8
-	THXAtrace("KV", 2, __FUNCTION__, "> %s (%56D)", 
+	THXAtrace("KV", 2, __FUNCTION__, "> %s (%56D)",
 		local_OOXA_local_KVXT_singleton_object->component, "capture_params", "KVXA:capture_params", capture_params);
 	if (iErrorCode != 0)
 	{//loc_9D18
-		THXAtrace("KV", 2, __FUNCTION__, "< %s ()=%R", 
+		THXAtrace("KV", 2, __FUNCTION__, "< %s ()=%R",
 			local_OOXA_local_KVXT_singleton_object->component, iErrorCode);
 		return iErrorCode;
 	}
 	// .text:00009B24
 	if (THXAcheckSimMode("KV", THXA_SIM_MODE_1) == 0)
 	{//loc_9B54
-		iErrorCode = OOXA_find_method(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x16, 0x3688ACF7, &pKVXT_isim_set_SA_capture_params);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x16, 0x3688ACF7, (void**)&pKVXT_isim_set_SA_capture_params);
 	}
 	else
 	{
@@ -9881,7 +9759,7 @@ int KVXT_set_SA_capture_params(const KVXA_capture_params *capture_params)
 	//loc_9B88
 	if (iErrorCode != 0)
 	{//loc_9D64→loc_9D18
-		THXAtrace("KV", 2, __FUNCTION__, "< %s ()=%R", 
+		THXAtrace("KV", 2, __FUNCTION__, "< %s ()=%R",
 			local_OOXA_local_KVXT_singleton_object->component, iErrorCode);
 		return iErrorCode;
 	}
@@ -9892,14 +9770,14 @@ int KVXT_set_SA_capture_params(const KVXA_capture_params *capture_params)
 		//loc_9C90→loc_9C94
 		if (iErrorCode != 0)
 		{//loc_9D18
-			THXAtrace("KV", 2, __FUNCTION__, "< %s ()=%R", 
+			THXAtrace("KV", 2, __FUNCTION__, "< %s ()=%R",
 				local_OOXA_local_KVXT_singleton_object->component, iErrorCode);
 			return iErrorCode;
 		}
 		else
 		{//loc_9CA0
 			THXAdataRequest("KV", 5, __FUNCTION__, 0, "%d", &iErrorCode);
-			THXAtrace("KV", 2, __FUNCTION__, "< %s ()=%R", 
+			THXAtrace("KV", 2, __FUNCTION__, "< %s ()=%R",
 				local_OOXA_local_KVXT_singleton_object->component, iErrorCode);
 			return iErrorCode;
 		}
@@ -9914,7 +9792,7 @@ int KVXT_set_SA_capture_params(const KVXA_capture_params *capture_params)
 	req_msg_data->capture_def.Ry_capture_spot_selection = capture_params->capture_def.Ry_capture_spot_selection;
 	req_msg_data->capture_def.change_of_process = capture_params->capture_def.change_of_process;
 	req_msg_data->capture_def.on_process = capture_params->capture_def.on_process;
-	iErrorCode = OOXA_send_receive(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x16, 0x3688ACF7,
+	iErrorCode = OOXA_send_receive((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x16, 0x3688ACF7,
 		req_msg_data, 0x38, &rep_msg_data, &act_len, 0x41, 0x96);
 	if (iErrorCode != 0)
 	{//loc_9C90→loc_9C94
@@ -9959,7 +9837,7 @@ int KVXT_set_SA_capture_params(const KVXA_capture_params *capture_params)
 }
 
 // 函数名：KVXT_set_SA_level_high_precision_count
-int KVXT_set_SA_level_high_precision_count(const int precision_count)
+int KVXT_set_SA_level_high_precision_count(int precision_count)
 {
 	int *req_msg_data = NULL;
 	int(*pKVXT_isim_set_SA_level_high_precision_count)(KVXT_local_OOXA_local_KVXT_singleton_object *local_OOXA_local_KVXT_singleton_object,
@@ -9968,17 +9846,17 @@ int KVXT_set_SA_level_high_precision_count(const int precision_count)
 	char *rep_msg_data = NULL;
 	int act_len = 0;
 	THXAdataRequest("KV", 4, __FUNCTION__, 0, "%4D", "precision_count", "int", &precision_count);
-	THXAtrace("KV", 2, __FUNCTION__, "> %s (%4D)", 
+	THXAtrace("KV", 2, __FUNCTION__, "> %s (%4D)",
 		local_OOXA_local_KVXT_singleton_object->component, "precision_count", "int", &precision_count);
 	if (iErrorCode != 0)
 	{//loc_6BFC
-		THXAtrace("KV", 2, __FUNCTION__, "< %s ()=%R", 
+		THXAtrace("KV", 2, __FUNCTION__, "< %s ()=%R",
 			local_OOXA_local_KVXT_singleton_object->component, iErrorCode);
 		return iErrorCode;
 	}
 	if (THXAcheckSimMode("KV", THXA_SIM_MODE_1) == 0)
 	{//loc_6A68
-		iErrorCode = OOXA_find_method(local_OOXA_local_KVXT_singleton_object, "KVXT:", 8, 0x670B48DB, &pKVXT_isim_set_SA_level_high_precision_count);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 8, 0x670B48DB, (void**)&pKVXT_isim_set_SA_level_high_precision_count);
 	}
 	else
 	{
@@ -9987,7 +9865,7 @@ int KVXT_set_SA_level_high_precision_count(const int precision_count)
 	//loc_6A9C
 	if (iErrorCode != 0)
 	{//loc_6C48→loc_6BFC
-		THXAtrace("KV", 2, __FUNCTION__, "< %s ()=%R", 
+		THXAtrace("KV", 2, __FUNCTION__, "< %s ()=%R",
 			local_OOXA_local_KVXT_singleton_object->component, iErrorCode);
 		return iErrorCode;
 	}
@@ -9998,14 +9876,14 @@ int KVXT_set_SA_level_high_precision_count(const int precision_count)
 		//loc_6B74→loc_6B78
 		if (iErrorCode != 0)
 		{//loc_6BFC
-			THXAtrace("KV", 2, __FUNCTION__, "< %s ()=%R", 
+			THXAtrace("KV", 2, __FUNCTION__, "< %s ()=%R",
 				local_OOXA_local_KVXT_singleton_object->component, iErrorCode);
 			return iErrorCode;
 		}
 		else
 		{//loc_6B84
 			THXAdataRequest("KV", 5, __FUNCTION__, 0, "%d", &iErrorCode);
-			THXAtrace("KV", 2, __FUNCTION__, "< %s ()=%R", 
+			THXAtrace("KV", 2, __FUNCTION__, "< %s ()=%R",
 				local_OOXA_local_KVXT_singleton_object->component, iErrorCode);
 			return iErrorCode;
 		}
@@ -10016,7 +9894,7 @@ int KVXT_set_SA_level_high_precision_count(const int precision_count)
 	{//loc_6B74
 		if (iErrorCode != 0)
 		{//loc_6BFC
-			THXAtrace("KV", 2, __FUNCTION__, "< %s ()=%R", 
+			THXAtrace("KV", 2, __FUNCTION__, "< %s ()=%R",
 				local_OOXA_local_KVXT_singleton_object->component, iErrorCode);
 			return iErrorCode;
 		}
@@ -10030,13 +9908,13 @@ int KVXT_set_SA_level_high_precision_count(const int precision_count)
 	}
 	// .text:00006AD0
 	*req_msg_data = precision_count;
-	iErrorCode = OOXA_send_receive(local_OOXA_local_KVXT_singleton_object, "KVXT:", 8, 0x670B48DB, 
+	iErrorCode = OOXA_send_receive((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 8, 0x670B48DB,
 		req_msg_data, 4, &rep_msg_data, &act_len, 0x41, 0x96);
 	if (iErrorCode != 0)
 	{//loc_6B74
 		if (iErrorCode != 0)
 		{//loc_6BFC
-			THXAtrace("KV", 2, __FUNCTION__, "< %s ()=%R", 
+			THXAtrace("KV", 2, __FUNCTION__, "< %s ()=%R",
 				local_OOXA_local_KVXT_singleton_object->component, iErrorCode);
 			return iErrorCode;
 		}
@@ -10073,7 +9951,7 @@ int KVXT_set_SA_level_high_precision_count(const int precision_count)
 }
 
 // 函数名：KVXT_set_SA_model_done
-int KVXT_set_SA_model_done(const bool sa_model_done)
+int KVXT_set_SA_model_done(bool sa_model_done)
 {
 	bool *req_msg_data = NULL;
 	int(*pKVXT_isim_set_SA_model_done)(KVXT_local_OOXA_local_KVXT_singleton_object *local_OOXA_local_KVXT_singleton_object,
@@ -10092,7 +9970,7 @@ int KVXT_set_SA_model_done(const bool sa_model_done)
 	// .text:0000A730
 	if (THXAcheckSimMode("KV", THXA_SIM_MODE_1) == 0)
 	{//loc_A760
-		iErrorCode = OOXA_find_method(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x1A, 0x225BA04C, &pKVXT_isim_set_SA_model_done);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x1A, 0x225BA04C, (void**)&pKVXT_isim_set_SA_model_done);
 	}
 	else
 	{
@@ -10122,7 +10000,7 @@ int KVXT_set_SA_model_done(const bool sa_model_done)
 		}
 	}
 	// .text:0000A7B0
-	iErrorCode = OOXA_allocate_buffer(0, req_msg_data);
+	iErrorCode = OOXA_allocate_buffer(0, (void**)&req_msg_data);
 	if (iErrorCode != 0)
 	{//loc_A86C
 		if (iErrorCode != 0)
@@ -10139,7 +10017,7 @@ int KVXT_set_SA_model_done(const bool sa_model_done)
 	}
 	// .text:0000A7C8
 	*req_msg_data = sa_model_done;
-	iErrorCode = OOXA_send_receive(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x1A, 0x225BA04C,
+	iErrorCode = OOXA_send_receive((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x1A, 0x225BA04C,
 		req_msg_data, 4, &rep_msg_data, &act_len, 0x41, 0x96);
 	if (iErrorCode != 0)
 	{//loc_A86C
@@ -10179,9 +10057,9 @@ int KVXT_set_SA_model_done(const bool sa_model_done)
 }
 
 // 函数名：KVXT_set_SA_plate_level_info
-int KVXT_set_SA_plate_level_info(const WPxCHUCK_chuck_id_enum chuck_id,
-	const MEXAxWAFxPLATE_wafer_level_plate plate_id,
-	const KVXA_plate_level_info *plate_level_info)
+int KVXT_set_SA_plate_level_info(WPxCHUCK_chuck_id_enum chuck_id,
+	MEXAxWAFxPLATE_wafer_level_plate plate_id,
+	KVXA_plate_level_info *plate_level_info)
 {
 	KVXT_unk_3 *req_msg_data = NULL;
 	int(*pKVXT_isim_set_SA_plate_level_info)(KVXT_local_OOXA_local_KVXT_singleton_object *local_OOXA_local_KVXT_singleton_object,
@@ -10194,7 +10072,7 @@ int KVXT_set_SA_plate_level_info(const WPxCHUCK_chuck_id_enum chuck_id,
 	char *psErrorText = NULL;
 	if (plate_level_info != NULL)
 	{//loc_8500
-		THXAdataRequest("KV", 4, __FUNCTION__, 0, "%4D %4D %8608D", 
+		THXAdataRequest("KV", 4, __FUNCTION__, 0, "%4D %4D %8608D",
 			"chuck_id", "WPxCHUCK:chuck_id_enum", &chuck_id, "plate_id", "MEXAxWAFxPLATE:wafer_level_plate", &plate_id,
 			"plate_level_info", "KVXA:plate_level_info", plate_level_info);
 	}
@@ -10211,7 +10089,7 @@ int KVXT_set_SA_plate_level_info(const WPxCHUCK_chuck_id_enum chuck_id,
 		}
 	}
 	// loc_85A4
-	THXAtrace("KV", 2, __FUNCTION__, "> %s (%4D %4D %8608D)", 
+	THXAtrace("KV", 2, __FUNCTION__, "> %s (%4D %4D %8608D)",
 		"KV", "chuck_id", "WPxCHUCK:chuck_id_enum", &chuck_id, "plate_id", "MEXAxWAFxPLATE:wafer_level_plate", &plate_id,
 		"plate_level_info", "KVXA:plate_level_info", plate_level_info);
 	if (iErrorCode != 0)
@@ -10222,7 +10100,7 @@ int KVXT_set_SA_plate_level_info(const WPxCHUCK_chuck_id_enum chuck_id,
 	// .text:00008660
 	if (THXAcheckSimMode("KV", THXA_SIM_MODE_1) == 0)
 	{//loc_8690
-		iErrorCode = OOXA_find_method(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x10, 0x326E9B91, pKVXT_isim_set_SA_plate_level_info);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x10, 0x326E9B91, (void**)&pKVXT_isim_set_SA_plate_level_info);
 	}
 	else
 	{
@@ -10269,7 +10147,7 @@ int KVXT_set_SA_plate_level_info(const WPxCHUCK_chuck_id_enum chuck_id,
 	req_msg_data->chuck_id = chuck_id;
 	req_msg_data->plate_id = plate_id;
 	memcpy(&req_msg_data->plate_level_info, plate_level_info, 0x21A0);
-	iErrorCode = OOXA_send_receive(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x10, 0x326E9B91, 
+	iErrorCode = OOXA_send_receive((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x10, 0x326E9B91,
 		req_msg_data, 0x21A8, &rep_msg_data, &act_len, 0x41, 0x96);
 	if (iErrorCode != 0)
 	{//loc_87C4
@@ -10320,7 +10198,7 @@ int KVXT_set_ws_zeroing_error_zrxry(zrxryvect *ws_zeroing_error_zrxry)
 	char *psErrorText = NULL;
 	if (ws_zeroing_error_zrxry != NULL)
 	{//loc_8D34
-		THXAdataRequest("KV", 4, __FUNCTION__, 0, "%24D", 
+		THXAdataRequest("KV", 4, __FUNCTION__, 0, "%24D",
 			"ws_zeroing_error_zrxry", "zrxryvect", ws_zeroing_error_zrxry);
 	}
 	else
@@ -10335,7 +10213,7 @@ int KVXT_set_ws_zeroing_error_zrxry(zrxryvect *ws_zeroing_error_zrxry)
 		}
 	}
 	// loc_8D88
-	THXAtrace("KV", 2, __FUNCTION__, "> %s (%24D)", 
+	THXAtrace("KV", 2, __FUNCTION__, "> %s (%24D)",
 		"KV", "ws_zeroing_error_zrxry", "zrxryvect", ws_zeroing_error_zrxry);
 	if (iErrorCode != 0)
 	{//loc_8FC8
@@ -10345,7 +10223,7 @@ int KVXT_set_ws_zeroing_error_zrxry(zrxryvect *ws_zeroing_error_zrxry)
 	// .text:00008DF4
 	if (THXAcheckSimMode("KV", THXA_SIM_MODE_1) == 0)
 	{//loc_8E24
-		iErrorCode = OOXA_find_method(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x12, 0x366D68D1, &pKVXT_isim_set_ws_zeroing_error_zrxry);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x12, 0x366D68D1, (void**)&pKVXT_isim_set_ws_zeroing_error_zrxry);
 	}
 	else
 	{
@@ -10394,7 +10272,7 @@ int KVXT_set_ws_zeroing_error_zrxry(zrxryvect *ws_zeroing_error_zrxry)
 	req_msg_data->z = ws_zeroing_error_zrxry->z;
 	req_msg_data->rx = ws_zeroing_error_zrxry->rx;
 	req_msg_data->ry = ws_zeroing_error_zrxry->ry;
-	iErrorCode = OOXA_send_receive(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x12, 0x366D68D1, 
+	iErrorCode = OOXA_send_receive((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x12, 0x366D68D1,
 		req_msg_data, 0x18, &rep_msg_data, &act_len, 0x41, 0x96);
 	if (iErrorCode == 0)
 	{//loc_8F40→loc_8F44
@@ -10434,8 +10312,8 @@ int KVXT_set_ws_zeroing_error_zrxry(zrxryvect *ws_zeroing_error_zrxry)
 }
 
 // 函数名：KVXT_set_XVSA_drift_ref_profile
-int KVXT_set_XVSA_drift_ref_profile(const WPxCHUCK_chuck_id_enum chuck_id,
-	const bool found_stable_chuck_profile)
+int KVXT_set_XVSA_drift_ref_profile(WPxCHUCK_chuck_id_enum chuck_id,
+	bool found_stable_chuck_profile)
 {
 	KVXT_unk_5 *req_msg_data = NULL;
 	int(*pKVXT_isim_set_XVSA_drift_ref_profile)(KVXT_local_OOXA_local_KVXT_singleton_object *local_OOXA_local_KVXT_singleton_object,
@@ -10444,9 +10322,9 @@ int KVXT_set_XVSA_drift_ref_profile(const WPxCHUCK_chuck_id_enum chuck_id,
 	int iErrorCode = 0;
 	char *rep_msg_data = NULL;
 	int act_len = 0;
-	THXAdataRequest("KV", 4, __FUNCTION__, 0, "%4D %4D", 
+	THXAdataRequest("KV", 4, __FUNCTION__, 0, "%4D %4D",
 		"KV", "chuck_id", "WPxCHUCK:chuck_id_enum", &chuck_id, "found_stable_chuck_profile", "bool", &found_stable_chuck_profile);
-	THXAtrace("KV", 2, __FUNCTION__, "> %s (%4D %4D)", 
+	THXAtrace("KV", 2, __FUNCTION__, "> %s (%4D %4D)",
 		"KV", "chuck_id", "WPxCHUCK:chuck_id_enum", &chuck_id, "found_stable_chuck_profile", "bool", &found_stable_chuck_profile);
 	if (iErrorCode != 0)
 	{//loc_C42C
@@ -10456,7 +10334,7 @@ int KVXT_set_XVSA_drift_ref_profile(const WPxCHUCK_chuck_id_enum chuck_id,
 	// .text:0000C25C
 	if (THXAcheckSimMode("KV", THXA_SIM_MODE_1) == 0)
 	{//loc_C28C
-		iErrorCode = OOXA_find_method(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x21, 0x7A549A5B, &pKVXT_isim_set_XVSA_drift_ref_profile);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x21, 0x7A549A5B, (void**)&pKVXT_isim_set_XVSA_drift_ref_profile);
 	}
 	else
 	{
@@ -10504,7 +10382,7 @@ int KVXT_set_XVSA_drift_ref_profile(const WPxCHUCK_chuck_id_enum chuck_id,
 	// .text:0000C2F4
 	req_msg_data->chuck_id = chuck_id;
 	req_msg_data->found_stable_chuck_profile = found_stable_chuck_profile;
-	iErrorCode = OOXA_send_receive(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x21, 0x7A549A5B, 
+	iErrorCode = OOXA_send_receive((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x21, 0x7A549A5B,
 		&req_msg_data, 8, &rep_msg_data, &act_len, 0x41, 0x96);
 	if (iErrorCode != 0)
 	{
@@ -10545,9 +10423,9 @@ int KVXT_set_XVSA_drift_ref_profile(const WPxCHUCK_chuck_id_enum chuck_id,
 }
 
 // 函数名：KVXT_set_XVSA_scan_refs
-int KVXT_set_XVSA_scan_refs(const WPxCHUCK_chuck_id_enum chuck_id,
-	const MEXAxWAFxPLATE_wafer_level_plate plate_id,
-	const MEXAxVSA_XVSA_scan_data *scan_result)
+int KVXT_set_XVSA_scan_refs(WPxCHUCK_chuck_id_enum chuck_id,
+	MEXAxWAFxPLATE_wafer_level_plate plate_id,
+	MEXAxVSA_XVSA_scan_data *scan_result)
 {
 	KVXT_unk_7 *req_msg_data = NULL;
 	int(*pKVXT_isim_set_XVSA_scan_refs)(KVXT_local_OOXA_local_KVXT_singleton_object *local_OOXA_local_KVXT_singleton_object,
@@ -10562,7 +10440,7 @@ int KVXT_set_XVSA_scan_refs(const WPxCHUCK_chuck_id_enum chuck_id,
 	{
 		// clr     [%fp+act_len]
 		// ------>loc_B658
-		THXAdataRequest("KV", 4, __FUNCTION__, 0, "%4D %4D %48008D", 
+		THXAdataRequest("KV", 4, __FUNCTION__, 0, "%4D %4D %48008D",
 			"chuck_id", "WPxCHUCK:chuck_id_enum", &chuck_id, "plate_id", "MEXAxWAFxPLATE:wafer_level_plate", &plate_id,
 			"scan_result", "MEXAxVSA:XVSA_scan_data", scan_result);
 	}
@@ -10579,8 +10457,8 @@ int KVXT_set_XVSA_scan_refs(const WPxCHUCK_chuck_id_enum chuck_id,
 		}
 	}
 	// loc_B6FC
-	THXAtrace("KV", 2, __FUNCTION__, "> %s (%4D %4D %48008D)", "KV", 
-		"chuck_id", "WPxCHUCK:chuck_id_enum", &chuck_id, "chuck_id", "MEXAxWAFxPLATE:wafer_level_plate", &chuck_id, 
+	THXAtrace("KV", 2, __FUNCTION__, "> %s (%4D %4D %48008D)", "KV",
+		"chuck_id", "WPxCHUCK:chuck_id_enum", &chuck_id, "chuck_id", "MEXAxWAFxPLATE:wafer_level_plate", &chuck_id,
 		"scan_result", "MEXAxVSA:XVSA_scan_data", scan_result);
 	if (iErrorCode != 0)
 	{//loc_B9A4
@@ -10590,7 +10468,7 @@ int KVXT_set_XVSA_scan_refs(const WPxCHUCK_chuck_id_enum chuck_id,
 	// .text:0000B7B8
 	if (THXAcheckSimMode("KV", THXA_SIM_MODE_1) == 0)
 	{//loc_B7E8
-		iErrorCode = OOXA_find_method(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x1E, 0x72308531, &pKVXT_isim_set_XVSA_scan_refs);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x1E, 0x72308531, (void**)&pKVXT_isim_set_XVSA_scan_refs);
 	}
 	else
 	{
@@ -10639,7 +10517,7 @@ int KVXT_set_XVSA_scan_refs(const WPxCHUCK_chuck_id_enum chuck_id,
 	req_msg_data->chuck_id = chuck_id;
 	req_msg_data->plate_id = plate_id;
 	memcpy(&req_msg_data->scan_result, scan_result, 0xBB88);
-	iErrorCode = OOXA_send_receive(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x1E, 0x72308531, 
+	iErrorCode = OOXA_send_receive((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x1E, 0x72308531,
 		rep_msg_data, 0, &rep_msg_data, &act_len, 0x41, 0x96);
 	if (iErrorCode != 0)
 	{//loc_B91C→loc_B920
@@ -10679,8 +10557,8 @@ int KVXT_set_XVSA_scan_refs(const WPxCHUCK_chuck_id_enum chuck_id,
 }
 
 // 函数名：KVXT_set_XVSA_thresholds
-int KVXT_set_XVSA_thresholds(const MEXAxVSA_XVSA_thresholds *XVSA_warning_levels,
-	const MEXAxVSA_XVSA_thresholds *XVSA_error_levels)
+int KVXT_set_XVSA_thresholds(MEXAxVSA_XVSA_thresholds *XVSA_warning_levels,
+	MEXAxVSA_XVSA_thresholds *XVSA_error_levels)
 {
 	KVXT_unk_1 *req_msg_data = NULL;
 	int(*pKVXT_isim_set_XVSA_thresholds)(KVXT_local_OOXA_local_KVXT_singleton_object *local_OOXA_local_KVXT_singleton_object,
@@ -10729,7 +10607,7 @@ int KVXT_set_XVSA_thresholds(const MEXAxVSA_XVSA_thresholds *XVSA_warning_levels
 	// .text:0000BBA8
 	if (THXAcheckSimMode("KV", THXA_SIM_MODE_1) == 0)
 	{//loc_BBD8
-		iErrorCode = OOXA_find_method(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x1F, 0x53944896, &pKVXT_isim_set_XVSA_thresholds);
+		iErrorCode = OOXA_find_method((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x1F, 0x53944896, (void**)&pKVXT_isim_set_XVSA_thresholds);
 	}
 	else
 	{
@@ -10786,7 +10664,7 @@ int KVXT_set_XVSA_thresholds(const MEXAxVSA_XVSA_thresholds *XVSA_warning_levels
 	req_msg_data->XVSA_error_levels.LS_Ry = XVSA_error_levels->LS_Ry;
 	req_msg_data->XVSA_error_levels.deformation = XVSA_error_levels->deformation;
 	req_msg_data->XVSA_error_levels.deformation_value = XVSA_error_levels->deformation_value;
-	iErrorCode = OOXA_send_receive(local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x1F, 0x53944896,
+	iErrorCode = OOXA_send_receive((OOXA_object_t*)local_OOXA_local_KVXT_singleton_object, "KVXT:", 0x1F, 0x53944896,
 		req_msg_data, 0x50, &rep_msg_data, &act_len, 0x41, 0x96);
 	if (iErrorCode != 0)
 	{

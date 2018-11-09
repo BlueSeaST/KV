@@ -19,6 +19,7 @@
 #include<string.h>
 //#include <stdbool.h>
 
+#include<KVXPKU_tc.h>
 #include <KVXPKU_extern.h>
 #include<base.h>
 #include<THXA.h>
@@ -32,7 +33,7 @@
 
 
 /*-------------------- 宏定义 --------------------*/
-#define _CRT_SECURE_NO_WARNINGS
+
 
 
 
@@ -43,11 +44,15 @@
 
 
 /*------------------------ 结构体 ------------------------*/
-typedef struct {
-	char unk_s0x0[0x10];
-	char component[0x64];
+typedef struct 
+{
+	// 这个在.got表里可以看到结构体内容
+	char unk_s0x0[0x4];
+	char unk_s0x4[0xC];
+	char component[0x60];
 }KVXPKU_local_KVXPKU_singleton_object;
 
+// 未知结构体
 typedef struct
 {
 	bool fingerprints_available;

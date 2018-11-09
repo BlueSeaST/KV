@@ -44,8 +44,10 @@ typedef struct
 
 typedef struct
 {
-	int i0x0; // 为了编译通过加的，需删去
-	//不知道里面有啥
+	// 这个在.got表里可以看到结构体内容
+	char unk_s0x0[0x4];
+	char unk_s0x4[0xC];
+	char component[0x60];
 } OOXA_object_t;
 
 
